@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/part_plot.css" rel="stylesheet" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.1.0/math.js"
+      integrity="sha512-fV7AgA3aFCdEFQgTcyJrUr5ZAMlRvCOxVIuLyX8Ru20HYFy9B9bOi74i6IsymKw0i9XM9V51aDEbFXqBPG/cKQ=="
+      crossorigin="anonymous"
+    ></script>
+    <title>Particle Plot's Generator</title>
+  </head>
+  <body>
+    <div id="nav">
+      <a href="">Downloads</a>
+      <a href="">Home</a>
+      <a href="">Generators</a>
+    </div>
+    <form id="inputForm">
+      <h1>Particle Plot Generator</h1>
+      <div id="time">
+        <div>
+          <label for="timeMin">Time Min:</label>
+          <input
+            class="text-field"
+            id="timeMin"
+            type="number"
+            min="-50"
+            max="50"
+            value="0"
+          />
+        </div>
+        <div>
+          <label for="timeMax">Time Max:</label>
+          <input
+            class="text-field"
+            id="timeMax"
+            type="number"
+            min="-50"
+            max="50"
+            value="20"
+          />
+        </div>
+      </div>
+      <div id="particleAmountDiv">
+        <label for="particleAmount">Particles: </label>
+        <input
+          type="range"
+          id="particleAmountRange"
+          min="0"
+          max="1000"
+          value="100"
+        />
+        <input
+          type="number"
+          id="particleAmountNumber"
+          min="0"
+          max="1000"
+          value="100"
+          class="text-field"
+        />
+      </div>
+      <div id="XYZ">
+        <div>
+          <label for="X">X: </label>
+          <input type="text" id="X" class="text-field" autocomplete="off" />
+        </div>
+        <div>
+          <label for="Y">Y: </label>
+          <input type="text" id="Y" class="text-field" autocomplete="off" />
+        </div>
+        <div>
+          <label for="Z">Z: </label>
+          <input type="text" id="Z" class="text-field" autocomplete="off" />
+        </div>
+      </div>
+
+      <div id="buttons">
+        <select id="preset" class="select">
+          <option value="cone">Cone</option>
+          <option value="cylinder">Cylinder</option>
+          <option value="sphere">Sphere</option>
+        </select>
+        <input type="button" value="Draw" class="button" id="draw" />
+        <input
+          type="button"
+          onclick="toggleSettings();"
+          value="Settings"
+          class="button"
+        />
+      </div>
+
+      <div id="settings">
+        <label for="selectParticle">particle</label>
+        <select id="selectParticle" class="select">
+          <option value="ambient_entity_effect">Ambient Entity Effect</option>
+          <option value="angry_villager">Angry Villager</option>
+          <option value="ash">Ash</option>
+          <option value="barrier">Barrier</option>
+          <option value="bubble">Bubble</option>
+          <option value="bubble_pop">Bubble Pop</option>
+          <option value="bubble_column_up">Bubble Column Up</option>
+          <option value="campfire_cosy_smoke">Campfire Cosy Smoke</option>
+          <option value="campfire_signal_smoke">Campfire Signal Smoke</option>
+          <option value="cloud">Cloud</option>
+          <option value="composter">Composter</option>
+          <option value="crimson_spore">Crimson Spore</option>
+          <option value="crit">Crit</option>
+          <option value="current_down">Current Down</option>
+          <option value="damage_indicator">Damage Indicator</option>
+          <option value="dolphin">Dolphin</option>
+          <option value="dragon_breath">Dragon Breath</option>
+          <option value="dripping_lava">Dripping Lava</option>
+          <option value="dripping_obsidian_tear">Dripping Obsidian Tear</option>
+          <option value="dripping_water">Dripping Water</option>
+          <option value="elder_guardian">Elder Guardian</option>
+          <option value="enchant">Enchant</option>
+          <option value="enchanted_hit">Enchanted Hit</option>
+          <option value="end_rod">End Rod</option>
+          <option value="entity_effect">Entity Effect</option>
+          <option value="explosion_emitter">Explosion Emitter</option>
+          <option value="explosion">Explosion</option>
+          <option value="falling_lava">Falling Lava</option>
+          <option value="falling_obsidian_tear">Falling Obsidian Tear</option>
+          <option value="falling_water">Falling Water</option>
+          <option value="firework">Firework</option>
+          <option value="fishing">Fishing</option>
+          <option value="flame">Flame</option>
+          <option value="flash">Flash</option>
+          <option value="happy_villager">Happy Villager</option>
+          <option value="heart">Heart</option>
+          <option value="instant_effect">Instant Effect</option>
+          <option value="item_slime">Item Slime</option>
+          <option value="item_snowball">Item Snowball</option>
+          <option value="landing_lava">Landing Lava</option>
+          <option value="landing_obsidian_tear">Landing Obsidian Tear</option>
+          <option value="large_smoke">Large Smoke</option>
+          <option value="lava">Lava</option>
+          <option value="mycelium">Mycelium</option>
+          <option value="nautilus">Nautilus</option>
+          <option value="note">Note</option>
+          <option value="poof">Poof</option>
+          <option value="portal">Portal</option>
+          <option value="rain">Rain</option>
+          <option value="smoke">Smoke</option>
+          <option value="sneeze">Sneeze</option>
+          <option value="soul">Soul</option>
+          <option value="soul_fire_flame">Soul Fire Flame</option>
+          <option value="spit">Spit</option>
+          <option value="splash">Splash</option>
+          <option value="squid_ink">Squid Ink</option>
+          <option value="sweep_attack">Sweep Attack</option>
+          <option value="totem_of_undying">Totem of Undying</option>
+          <option value="underwater">Underwater</option>
+          <option value="warped_spore">Warped Spore</option>
+          <option value="witch">Witch</option>
+        </select>
+        <input
+          id="commandSpecifier"
+          class="text-field"
+          type="text"
+          value="0 0 0 0 1 force @a"
+        />
+      </div>
+
+      <div id="chart"></div>
+      <h3>Output:</h3>
+      <p>
+        Copy and paste these commands in a .mcfunction file in a datapack, run
+        the function and you're ready to go!
+      </p>
+      <textarea id="output"></textarea>
+      <p>
+        All credits goes to cloudwolf.
+        <a href="https://www.youtube.com/channel/UCZnBqVITQ0dloqUU0fGxY3g"
+          >YouTube channel</a
+        >
+      </p>
+    </form>
+
+    <script src="../js/part_plot.js" defer></script>
+  </body>
+</html>

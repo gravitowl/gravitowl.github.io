@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./pages/css/general.css" type="text/css" rel="stylesheet" />
+    <title>Gravitowl's Website || Home</title>
+  </head>
+  <body>
+    <div id="nav">
+      <a href="pages/downs/main.html">Downloads</a>
+      <a href="index.html">Home</a>
+      <a href="pages/gens/main.html">Generators</a>
+    </div>
+    <div id="content">
+      <h1>Gravitowl's Website</h1>
+      <h2>About</h2>
+      <p>
+        This site has several generators used for datapack creation, made in
+        javascript by me. These generators may or may not have been invented by
+        other people, if it has, the original inventor will be credited on the
+        page. You can also find downloads on this website for my datapacks.
+      </p>
+      <h3>Links</h3>
+      <button class="button" id="youtube">YouTube</button>
+      <button class="button" id="discord">Discord</button>
+    </div>
+    <script>
+      document.getElementById("youtube").addEventListener("click", () => {
+        window.open("https://www.youtube.com/channel/UCnwwNuHXu2on_yDo4pTr85g");
+      });
+      document.getElementById("discord").addEventListener("click", () => {
+        window.open("https://discord.gg/848DY9v");
+      });
+    </script>
+  </body>
+</html>
