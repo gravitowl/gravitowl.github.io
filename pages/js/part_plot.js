@@ -59,6 +59,7 @@ preset.addEventListener("input", () => {
       zInput.value = "cos((t%10)*pi)cos(t/10*pi)";
       particleAmountNumber.value = "400";
       particleAmountRange.value = "400";
+      timeMax.value = "40";
 
       generatePlot(
         Number(timeMinInput.value),
