@@ -80,7 +80,10 @@ particleAmountNumber.addEventListener("input", syncCharacterAmount);
 particleAmountRange.addEventListener("input", syncCharacterAmount);
 
 function syncCharacterAmount(e) {
-  const value = e.target.value;
+  let value = e.target.value;
+  if (Number(value) > particleAmountNumber.max) {
+    value = particleAmountNumber.max;
+  }
   particleAmountNumber.value = value;
   particleAmountRange.value = value;
 }
