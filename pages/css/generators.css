@@ -1,0 +1,17 @@
+#grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 2rem;
+
+  margin: 0 auto;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.generator {
+  width: auto;
+  padding: 5px;
+  border: 3px solid #5e5e5e;
+  border-radius: 5px;
+}
