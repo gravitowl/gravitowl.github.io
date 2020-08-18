@@ -126,8 +126,19 @@ function generatePlot(
     y = yInput.replace(/[t]/g, t);
     z = zInput.replace(/[t]/g, t);
     x = math.evaluate(x);
+    x = x * 15;
+    x = Math.floor(x);
+    x = x / 15;
+
     y = math.evaluate(y);
+    y = y * 15;
+    y = Math.floor(y);
+    y = y / 15;
+
     z = math.evaluate(z);
+    z = z * 15;
+    z = Math.floor(z);
+    z = z / 15;
 
     let command = `particle minecraft:${selectedParticle} ^${x} ^${y} ^${z} ${commandEnd}`;
     xyz[0].push(x);
