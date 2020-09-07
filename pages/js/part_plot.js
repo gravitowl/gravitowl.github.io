@@ -22,9 +22,9 @@ const preset = document.getElementById("preset");
 preset.addEventListener("input", () => {
   switch (preset.value) {
     case "cone":
-      xInput.value = "t * sin(t)";
-      yInput.value = "t * cos(t)";
-      zInput.value = "t";
+      xInput.value = "T * sin(T)";
+      yInput.value = "T * cos(T)";
+      zInput.value = "T";
       generatePlot(
         Number(timeMinInput.value),
         Number(timeMaxInput.value),
@@ -38,9 +38,9 @@ preset.addEventListener("input", () => {
       );
       break;
     case "cylinder":
-      xInput.value = "sin(t)";
-      yInput.value = "cos(t)";
-      zInput.value = "t";
+      xInput.value = "sin(T)";
+      yInput.value = "cos(T)";
+      zInput.value = "T";
       generatePlot(
         Number(timeMinInput.value),
         Number(timeMaxInput.value),
@@ -54,9 +54,9 @@ preset.addEventListener("input", () => {
       );
       break;
     case "sphere":
-      xInput.value = "sin(t/10*pi)";
-      yInput.value = "sin((t%10)*pi)cos(t/10*pi)";
-      zInput.value = "cos((t%10)*pi)cos(t/10*pi)";
+      xInput.value = "sin(T/10*pi)";
+      yInput.value = "sin((T%10)*pi)cos(t/10*pi)";
+      zInput.value = "cos((T%10)*pi)cos(t/10*pi)";
       particleAmountNumber.value = "400";
       particleAmountRange.value = "400";
 
@@ -72,6 +72,45 @@ preset.addEventListener("input", () => {
         commandSpecifier.value
       );
       break;
+    case "golden-ratio":
+      xInput.value = "sin(T*pi*1.61803398875*P)*(1-T*T)^0.5";
+      yInput.value = "T";
+      zInput.value = "cos(T*pi*1.61803398875*P)*(1-T*T)^0.5";
+      particleAmountNumber.value = "400";
+      particleAmountRange.value = "400";
+      timeMinInput.value = "-1";
+      timeMaxInput.value = "1";
+      generatePlot(
+        Number(timeMinInput.value),
+        Number(timeMaxInput.value),
+        Number(particleAmountNumber.value),
+        xInput.value,
+        yInput.value,
+        zInput.value,
+        commandOutput,
+        particle.value,
+        commandSpecifier.value
+      );
+      break;
+    case "magica":
+      xInput.value = "sin(T*pi/3*1.03)*(1-exp(-exp(T/15)/10))";
+      yInput.value = "cos(T*pi/3*1.03)*(1-exp(-exp(T/15)/10))";
+      zInput.value = "0";
+      particleAmountNumber.value = "100";
+      particleAmountRange.value = "100";
+      timeMinInput.value = "0";
+      timeMaxInput.value = "100";
+      generatePlot(
+        Number(timeMinInput.value),
+        Number(timeMaxInput.value),
+        Number(particleAmountNumber.value),
+        xInput.value,
+        yInput.value,
+        zInput.value,
+        commandOutput,
+        particle.value,
+        commandSpecifier.value
+      );
   }
 });
 
@@ -122,9 +161,14 @@ function generatePlot(
   let commandEnd = lastPartCommand;
   for (let particle = 1; particle <= particleAmount; particle++) {
     let t = map(particle, 0, particleAmount, timeMin, timeMax);
-    x = xInput.replace(/[t]/g, t);
-    y = yInput.replace(/[t]/g, t);
-    z = zInput.replace(/[t]/g, t);
+    x = xInput.replace(/[T]/g, t);
+    y = yInput.replace(/[T]/g, t);
+    z = zInput.replace(/[T]/g, t);
+
+    x = x.replace(/[P]/g, particleAmount);
+    y = y.replace(/[P]/g, particleAmount);
+    z = z.replace(/[P]/g, particleAmount);
+
     x = math.evaluate(x);
     x = x * Math.pow(10, 9);
     x = Math.floor(x);
@@ -207,9 +251,9 @@ function toggleSettings() {
 
 toggleSettings();
 
-xInput.value = "t * sin(t)";
-yInput.value = "t * cos(t)";
-zInput.value = "t";
+xInput.value = "T * sin(T)";
+yInput.value = "T * cos(T)";
+zInput.value = "T";
 generatePlot(
   Number(timeMinInput.value),
   Number(timeMaxInput.value),
