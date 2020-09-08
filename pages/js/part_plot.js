@@ -25,6 +25,9 @@ preset.addEventListener("input", () => {
       xInput.value = "T * sin(T)";
       yInput.value = "T * cos(T)";
       zInput.value = "T";
+      particleAmountNumber.value = "100";
+      particleAmountRange.value = "100";
+
       generatePlot(
         Number(timeMinInput.value),
         Number(timeMaxInput.value),
@@ -41,6 +44,9 @@ preset.addEventListener("input", () => {
       xInput.value = "sin(T)";
       yInput.value = "cos(T)";
       zInput.value = "T";
+      particleAmountNumber.value = "100";
+      particleAmountRange.value = "100";
+
       generatePlot(
         Number(timeMinInput.value),
         Number(timeMaxInput.value),
@@ -55,8 +61,8 @@ preset.addEventListener("input", () => {
       break;
     case "sphere":
       xInput.value = "sin(T/10*pi)";
-      yInput.value = "sin((T%10)*pi)cos(t/10*pi)";
-      zInput.value = "cos((T%10)*pi)cos(t/10*pi)";
+      yInput.value = "sin((T%10)*pi)cos(T/10*pi)";
+      zInput.value = "cos((T%10)*pi)cos(T/10*pi)";
       particleAmountNumber.value = "400";
       particleAmountRange.value = "400";
 
@@ -100,6 +106,29 @@ preset.addEventListener("input", () => {
       particleAmountRange.value = "100";
       timeMinInput.value = "0";
       timeMaxInput.value = "100";
+      generatePlot(
+        Number(timeMinInput.value),
+        Number(timeMaxInput.value),
+        Number(particleAmountNumber.value),
+        xInput.value,
+        yInput.value,
+        zInput.value,
+        commandOutput,
+        particle.value,
+        commandSpecifier.value
+      );
+      break;
+    case "cube":
+      xInput.value =
+        "(1)/(1+exp(-10000*(T-1)))-((1)/(1+exp(-10000*(T-2))))+T*((1)/(1+exp(-10000*T))-((1)/(1+exp(-10000*(T-1)))))+(3-T)*((1)/(1+exp(-10000*(T-2)))-((1)/(1+exp(-10000*(T-3)))))+(1)/(1+exp(-10000*(T-6)))-((1)/(1+exp(-10000*(T-8))))+(T-8)*((1)/(1+exp(-10000*(T-8)))-((1)/(1+exp(-10000*(T-9)))))+(1)/(1+exp(-10000*(T-9)))-((1)/(1+exp(-10000*(T-10))))+(11-T)*((1)/(1+exp(-10000*(T-10)))-((1)/(1+exp(-10000*(T-11)))))";
+      yInput.value =
+        "(T-4)*((1)/(1+exp(-10000*(T-4)))-((1)/(1+exp(-10000*(T-5)))))+(T-5)*((1)/(1+exp(-10000*(T-5)))-((1)/(1+exp(-10000*(T-6)))))+(T-6)*((1)/(1+exp(-10000*(T-6)))-((1)/(1+exp(-10000*(T-7)))))+(T-7)*((1)/(1+exp(-10000*(T-7)))-((1)/(1+exp(-10000*(T-8)))))+(1)/(1+exp(-10000*(T-8)))-((1)/(1+exp(-10000*(T-12))))";
+      zInput.value =
+        "(T-1)*((1)/(1+exp(-10000*(T-1)))-((1)/(1+exp(-10000*(T-2)))))+(1)/(1+exp(-10000*(T-2)))-((1)/(1+exp(-10000*(T-3))))+(4-T)*((1)/(1+exp(-10000*(T-3)))-((1)/(1+exp(-10000*(T-4)))))+(1)/(1+exp(-10000*(T-5)))-((1)/(1+exp(-10000*(T-6))))+(1)/(1+exp(-10000*(T-7)))-((1)/(1+exp(-10000*(T-8))))+(T-9)*((1)/(1+exp(-10000*(T-9)))-((1)/(1+exp(-10000*(T-10)))))+(1)/(1+exp(-10000*(T-10)))-((1)/(1+exp(-10000*(T-11))))+(12-T)*((1)/(1+exp(-10000*(T-11)))-((1)/(1+exp(-10000*(T-12)))))";
+      particleAmountNumber.value = "149";
+      particleAmountRange.value = "149";
+      timeMinInput.value = "0.001";
+      timeMaxInput.value = "11.999";
       generatePlot(
         Number(timeMinInput.value),
         Number(timeMaxInput.value),
@@ -254,6 +283,9 @@ toggleSettings();
 xInput.value = "T * sin(T)";
 yInput.value = "T * cos(T)";
 zInput.value = "T";
+particleAmountNumber.value = "100";
+particleAmountRange.value = "100";
+
 generatePlot(
   Number(timeMinInput.value),
   Number(timeMaxInput.value),
