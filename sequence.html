@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./css/navbar.css" type="text/css" rel="stylesheet" />
+    <link href="./css/sequence.css" type="text/css" rel="stylesheet" />
+    <link href="./css/modal.css" type="text/css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"
+    ></script>
+    <script defer src="../js/sequence.js"></script>
+    <script defer src="../js/modal.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravitowl's Website || Sequence Generator</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html"><h2>gravitowl</h2></a>
+      <ul class="links">
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="generators.html">Generators</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="variables card">
+        <div class="variable-card">
+          <h3>Add Variable</h3>
+          <button id="addVarButton">&plus;</button>
+        </div>
+      </div>
+      <div class="form card">
+        <h2>Sequence Generator</h2>
+        <div class="command input">
+          <label for="command">Command:</label>
+          <input type="text" id="command" />
+        </div>
+        <div class="repetitions input">
+          <label for="repetitions">Repetitions:</label>
+          <input
+            type="number"
+            class="number"
+            min="1"
+            value="5"
+            id="repetitions"
+          />
+        </div>
+        <div class="buttons">
+          <button id="generate">Generate</button>
+          <button id="download">Download</button>
+        </div>
+        <p class="download-error">No output to download!</p>
+        <textarea id="output"> </textarea>
+      </div>
+
+      <div id="overlay"></div>
+    </div>
+  </body>
+</html>

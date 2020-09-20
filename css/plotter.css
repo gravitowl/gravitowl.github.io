@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 600px 800px;
+  grid-column-gap: 2rem;
+  width: 75%;
+  margin: auto;
+  margin-top: 4rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  padding: 2rem;
+  height: 100%;
+}
+
+.card.graph {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+
+.input {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 15% 30%;
+}
+
+label {
+  align-self: center;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  background: #f4f4f4;
+  height: 1.5rem;
+  text-indent: 0.3rem;
+}
+
+select {
+  border: none;
+  border-radius: 5px;
+  background: #f4f4f4;
+  height: 1.5rem;
+  text-align-last: center;
+}
+button {
+  background: #a4b494;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem;
+  transition: 0.3s ease;
+  height: 2rem;
+  width: 5rem;
+  outline: none;
+}
+
+button:hover {
+  background: #519872;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  float: left;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.buttons button {
+  margin-right: 1rem;
+}
+
+.download-error {
+  display: none;
+  color: #d82626;
+  margin-top: 0.2rem;
+  font-size: small;
+}

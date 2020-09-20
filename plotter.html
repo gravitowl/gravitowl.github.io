@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./css/navbar.css" type="text/css" rel="stylesheet" />
+    <link href="./css/plotter.css" type="text/css" rel="stylesheet" />
+    <link href="./css/modal.css" type="text/css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"
+    ></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js" defer=""></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.2.0/math.min.js"></script>
+    <script defer src="./js/plotter.js"></script>
+    <script defer src="./js/modal.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravitowl's Website || Particle Plotter</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html"><h2>gravitowl</h2></a>
+      <ul class="links">
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="generators.html">Generators</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="graph card" id="graph"></div>
+      <div class="form card">
+        <h2>Particle Plotter</h2>
+        <div class="timeMin input">
+          <label for="timeMin">Time Min:</label>
+          <input type="number" id="timeMin" min="-50" max="50" value="0"/>
+        </div>
+        <div class="timeMax input">
+          <label for="timeMax">Time Max:</label>
+          <input type="number" id="timeMax" min="-50" max="50" value="20"/>
+        </div>
+        <div class="particles input">
+          <label for="particles">Particles:</label>
+          <input type="number" id="particles" min="1" max="1000" value="150"/>
+        </div>
+        <div class="x input">
+          <label for="x">X:</label>
+          <input type="text" id="x" />
+        </div>
+        <div class="y input">
+          <label for="y">Y:</label>
+          <input type="text" id="y" />
+        </div>
+        <div class="z input">
+          <label for="z">Z:</label>
+          <input type="text" id="z" />
+        </div>
+        <div class="presets input">
+          <label for="presets">Preset:</label>
+          <select id="presets">
+            <option value="cone">Cone</option>
+            <option value="cylinder">Cylinder</option>
+            <option value="sphere">Sphere</option>
+            <option value="golden_ratio">Golden Ratio Sphere</option>
+            <option value="magika">Magica Magikadoo</option>
+            <option value="cube">Cube</option>
+          </select>
+        </div>
+        <div class="buttons">
+          <button id="settings" data-modal-target="#settingsModal">
+            Settings
+          </button>
+          <button id="render">Render</button>
+          <button id="download">Download</button>
+        </div>
+        <p class="download-error">No output to download!</p>
+      </div>
+
+      <div class="modal" id="settingsModal">
+        <div class="modal-header">
+          <div class="title">Settings</div>
+          <button data-modal-close class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+          <label for="particle">Particle:</label>
+          <select id="particle">
+            <option value="ambient_entity_effect">Ambient Entity Effect</option>
+            <option value="angry_villager">Angry Villager</option>
+            <option value="ash">Ash</option>
+            <option value="barrier">Barrier</option>
+            <option value="bubble">Bubble</option>
+            <option value="bubble_pop">Bubble Pop</option>
+            <option value="bubble_column_up">Bubble Column Up</option>
+            <option value="campfire_cosy_smoke">Campfire Cosy Smoke</option>
+            <option value="campfire_signal_smoke">Campfire Signal Smoke</option>
+            <option value="cloud">Cloud</option>
+            <option value="composter">Composter</option>
+            <option value="crimson_spore">Crimson Spore</option>
+            <option value="crit">Crit</option>
+            <option value="damage_indicator">Damage Indicator</option>
+            <option value="dolphin">Dolphin</option>
+            <option value="current_down">Current Down</option>
+            <option value="dripping_lava">Dripping Lava</option>
+            <option value="dripping_obsidian_tear">Dripping Obsidian Tear</option>
+            <option value="dripping_water">Dripping Water</option>
+            <option value="elder_guardian">Elder Guardian</option>
+            <option value="enchant">Enchant</option>
+            <option value="enchanted_hit">Enchanted Hit</option>
+            <option value="end_rod">End Rod</option>
+            <option value="entity_effect">Entity Effect</option>
+            <option value="explosion_emitter">Explosion Emitter</option>
+            <option value="explosion">Explosion</option>
+            <option value="falling_lava">Falling Lava</option>
+            <option value="falling_obsidian_tear">Falling Obsidian Tear</option>
+            <option value="falling_water">Falling Water</option>
+            <option value="firework">Firework</option>
+            <option value="fishing">Fishing</option>
+            <option value="flame">Flame</option>
+            <option value="flash">Flash</option>
+            <option value="happy_villager">Happy Villager</option>
+            <option value="heart">Heart</option>
+            <option value="instant_effect">Instant Effect</option>
+            <option value="item_slime">Item Slime</option>
+            <option value="item_snowball">Item Snowball</option>
+            <option value="landing_lava">Landing Lava</option>
+            <option value="landing_obsidian_tear">Landing Obsidian Tear</option>
+            <option value="large_smoke">Large Smoke</option>
+            <option value="lava">Lava</option>
+            <option value="mycelium">Mycelium</option>
+            <option value="nautilus">Nautilus</option>
+            <option value="note">Note</option>
+            <option value="poof">Poof</option>
+            <option value="portal">Portal</option>
+            <option value="rain">Rain</option>
+            <option value="smoke">Smoke</option>
+            <option value="sneeze">Sneeze</option>
+            <option value="soul">Soul</option>
+            <option value="soul_fire_flame">Soul Fire Flame</option>
+            <option value="spit">Spit</option>
+            <option value="splash">Splash</option>
+            <option value="squid_ink">Squid Ink</option>
+            <option value="sweep_attack">Sweep Attack</option>
+            <option value="totem_of_undying">Totem of Undying</option>
+            <option value="underwater">Underwater</option>
+            <option value="warped_spore">Warped Spore</option>
+            <option value="witch">Witch</option>
+            <option value="dragon_breath">Dragon Breath</option>
+          </select>
+          <label for="speed">Speed:</label>
+          <input type="number" id="speed" min="0.0001" max="100" value="0.001"/>
+          <label for="count">Count:</label>
+          <input type="number" id="count" min="1" max="999999999" value="10"/>
+          <label for="force">Force:</label>
+          <input type="checkbox" id="force" checked="true"/>
+          <label for="selector">Selector:</label>
+          <input type="text" id="selector" value="@a">
+          </label>
+        </div>
+      </div>
+      <div id="overlay"></div>
+    </div>
+  </body>
+</html>
