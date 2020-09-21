@@ -81,16 +81,19 @@ function generateCommands(
     zValue = zValue.replace(/[P]/g, particleAmount);
 
     xValue = math.evaluate(xValue);
+    xValue = math.format(xValue, { notation: "fixed" });
     xValue = xValue * Math.pow(10, 9);
     xValue = Math.floor(xValue);
     xValue = xValue / Math.pow(10, 9);
 
     yValue = math.evaluate(yValue);
+    yValue = math.format(yValue, { notation: "fixed" });
     yValue = yValue * Math.pow(10, 9);
     yValue = Math.floor(yValue);
     yValue = yValue / Math.pow(10, 9);
 
     zValue = math.evaluate(zValue);
+    zValue = math.format(zValue, { notation: "fixed" });
     zValue = zValue * Math.pow(10, 9);
     zValue = Math.floor(zValue);
     zValue = zValue / Math.pow(10, 9);
