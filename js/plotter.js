@@ -98,7 +98,7 @@ function generateCommands(
     zValue = Math.floor(zValue);
     zValue = zValue / Math.pow(10, 9);
 
-    let command = `particle minecraf:${particleType} ^${xValue} ^${yValue} ^${zValue} 0 0 0 ${speed} ${amount} ${force} ${selector}`;
+    let command = `particle minecraft:${particleType} ^${xValue} ^${yValue} ^${zValue} 0 0 0 ${speed} ${amount} ${force} ${selector}`;
     commands.push(command);
     xyz[0].push(xValue);
     xyz[1].push(yValue);
