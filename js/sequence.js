@@ -188,7 +188,7 @@ function generateSequence() {
   for (let i = 1; i <= repetition; i++) {
     let finalCommand = command;
     for (let i = 0; i < variables.length; i++) {
-      finalCommand = finalCommand.replace(variables[i], variablesValue[i]);
+      finalCommand = finalCommand.replaceAll(variables[i], variablesValue[i]);
       variablesValue[i] += variablesIncrement[i];
     }
     commands.push(finalCommand);
