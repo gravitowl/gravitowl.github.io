@@ -63,6 +63,11 @@ body {
   background-size: cover;
 }
 
+.card-image.custommodeldata-gen {
+  background: url("../images/generators/custommodeldata.jpg");
+  background-size: cover;
+}
+
 .card-text {
   grid-area: text;
   margin-top: 1rem;

@@ -118,10 +118,10 @@ addVarButton.addEventListener("click", () => {
   });
 
   //event listener for updating title
-  nameInput.addEventListener("change", () => {
+  nameInput.oninput = () => {
     nameInput.parentElement.parentElement.parentElement.firstChild.innerHTML =
       nameInput.value;
-  });
+  };
 });
 
 //event listener for overlay to disable modal
@@ -226,3 +226,16 @@ String.prototype.trim = function () {
 
 //   saveAs(blob, name);
 // });
+
+// {
+//   "parent": "item/handheld",
+//   "textures": {
+//    "layer0": "item/<base item>"
+//   },
+
+//   "overrides": [
+//    { "predicate": {"custom_model_data": <number>}, "model": "item/<model's json file>"}
+
+//   ]
+
+//  }

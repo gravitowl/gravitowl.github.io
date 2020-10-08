@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 600px 800px;
+  grid-template-rows: 500px;
+  grid-column-gap: 2rem;
+  width: 75%;
+  margin: auto;
+  margin-top: 4rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  padding: 2rem;
+  height: 100%;
+  overflow-y: auto;
+  scroll-margin: 0;
+  scroll-padding: 0;
+}
+
+.card.output {
+  padding: 1rem;
+}
+
+.input {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 15% 40%;
+}
+
+label {
+  align-self: center;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  background: #f4f4f4;
+  height: 1.5rem;
+  text-indent: 0.3rem;
+}
+
+select {
+  border: none;
+  border-radius: 5px;
+  background: #f4f4f4;
+  height: 1.5rem;
+  text-align-last: center;
+}
+
+button {
+  background: #a4b494;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem;
+  transition: 0.3s ease;
+  height: 2rem;
+  width: 5rem;
+  outline: none;
+  margin-right: 1rem;
+}
+
+button:hover {
+  background: #519872;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  float: left;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.model-card {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+  padding-top: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.modeldata-card h3 {
+  align-self: center;
+}
+
+.modeldata-card button {
+  float: right;
+}
+
+.buttons-div button {
+  margin-left: 1rem;
+}
+
+.model-title {
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+textarea {
+  resize: none;
+  margin-top: 2rem;
+  width: 100%;
+  min-height: 45%;
+}
+
+.error {
+  display: none;
+  color: #d82626;
+  margin-top: 0.2rem;
+  font-size: small;
+}
+
+.itemDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#filter {
+  width: 50%;
+  margin-left: 1rem;
+}
+
+#item {
+  width: 100%;
+}

@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./css/navbar.css" type="text/css" rel="stylesheet" />
+    <link href="./css/modeldata.css" type="text/css" rel="stylesheet" />
+    <link href="./css/modal.css" type="text/css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"
+    ></script>
+    <script defer src="../js/modeldata.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravitowl's Website || Custom Model Data Generator</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html"><h2>gravitowl</h2></a>
+      <ul class="links">
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="generators.html">Generators</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="modeldata card">
+        <div class="model-card">
+          <h3>Add Custom Model</h3>
+          <button id="addModelButton">&plus;</button>
+        </div>
+      </div>
+      <div class="form card">
+        <h2>Custom Model Data Generator</h2>
+        <div class="item input">
+          <label for="item">Item:</label>
+          <div class="itemDiv">
+            <select id="item">
+              <option value="-1">unset</option>
+              <option value="acacia_boat">Acacia Boat</option>
+              <option value="acacia_button">Acacia Button</option>
+              <option value="acacia_door">Acacia Door</option>
+              <option value="acacia_fence">Acacia Fence</option>
+              <option value="acacia_fence_gate">Acacia Fence Gate</option>
+              <option value="acacia_leaves">Acacia Leaves</option>
+              <option value="acacia_log">Acacia Log</option>
+              <option value="acacia_planks">Acacia Planks</option>
+              <option value="acacia_pressure_plate">
+                Acacia Pressure Plate
+              </option>
+              <option value="acacia_sapling">Acacia Sapling</option>
+              <option value="acacia_sign">Acacia Sign</option>
+              <option value="acacia_slab">Acacia Slab</option>
+              <option value="acacia_stairs">Wooden Stairs (Acacia)</option>
+              <option value="acacia_trapdoor">Acacia Trapdoor</option>
+              <option value="acacia_wood">Acacia Wood</option>
+              <option value="activator_rail">Activator Rail</option>
+              <option value="allium">Allium</option>
+              <option value="ancient_debris">Ancient Debris</option>
+              <option value="andesite">Andesite</option>
+              <option value="andesite_slab">Andesite Slab</option>
+              <option value="andesite_stairs">Andesite Stairs</option>
+              <option value="andesite_wall">Andesite Wall</option>
+              <option value="anvil">Anvil</option>
+              <option value="apple">Apple</option>
+              <option value="armor_stand">Armor Stand</option>
+              <option value="arrow">Arrow</option>
+              <option value="azure_bluet">Azure Bluet</option>
+              <option value="baked_potato">Baked Potato</option>
+              <option value="bamboo">Bamboo</option>
+              <option value="barrel">Barrel</option>
+              <option value="barrier">Barrier</option>
+              <option value="basalt">Basalt</option>
+              <option value="bat_spawn_egg">Spawn Bat</option>
+              <option value="beacon">Beacon Block</option>
+              <option value="bedrock">Bedrock</option>
+              <option value="bee_nest">Bee Nest</option>
+              <option value="bee_spawn_egg">Spawn Bee</option>
+              <option value="beef">Raw Beef</option>
+              <option value="beehive">Beehive</option>
+              <option value="beetroot">Beetroot</option>
+              <option value="beetroot_seeds">Beetroot Seeds</option>
+              <option value="beetroot_soup">Beetroot Soup</option>
+              <option value="bell">Bell</option>
+              <option value="birch_boat">Birch Boat</option>
+              <option value="birch_button">Birch Button</option>
+              <option value="birch_door">Birch Door</option>
+              <option value="birch_fence">Birch Fence</option>
+              <option value="birch_fence_gate">Birch Fence Gate</option>
+              <option value="birch_leaves">Birch Leaves</option>
+              <option value="birch_log">Birch Log</option>
+              <option value="birch_planks">Birch Planks</option>
+              <option value="birch_pressure_plate">Birch Pressure Plate</option>
+              <option value="birch_sapling">Birch Sapling</option>
+              <option value="birch_sign">Birch Sign</option>
+              <option value="birch_slab">Birch Slab</option>
+              <option value="birch_stairs">Birch Wood Stairs</option>
+              <option value="birch_trapdoor">Birch Trapdoor</option>
+              <option value="birch_wood">Birch Wood</option>
+              <option value="black_banner">Black Banner</option>
+              <option value="black_bed">Black Bed</option>
+              <option value="black_carpet">Black Carpet</option>
+              <option value="black_concrete">Black Concrete</option>
+              <option value="black_concrete_powder">
+                Black Concrete Powder
+              </option>
+              <option value="black_dye">Black Dye</option>
+              <option value="black_glazed_terracotta">
+                Black Glazed Terracotta
+              </option>
+              <option value="black_shulker_box">Black Shulker Box</option>
+              <option value="black_stained_glass">Black Stained Glass</option>
+              <option value="black_stained_glass_pane">
+                Black Stained Glass Pane
+              </option>
+              <option value="black_terracotta">Black Terracotta</option>
+              <option value="black_wool">Black Wool</option>
+              <option value="blackstone">Blackstone</option>
+              <option value="blackstone_slab">Blackstone Slab</option>
+              <option value="blackstone_stairs">Blackstone Stairs</option>
+              <option value="blackstone_wall">Blackstone Wall</option>
+              <option value="blast_furnace">Blast Furnace</option>
+              <option value="blaze_powder">Blaze Powder</option>
+              <option value="blaze_rod">Blaze Rod</option>
+              <option value="blaze_spawn_egg">Spawn Blaze</option>
+              <option value="blue_banner">Blue Banner</option>
+              <option value="blue_bed">Blue Bed</option>
+              <option value="blue_carpet">Blue Carpet</option>
+              <option value="blue_concrete">Blue Concrete</option>
+              <option value="blue_concrete_powder">Blue Concrete Powder</option>
+              <option value="blue_dye">Blue Dye</option>
+              <option value="blue_glazed_terracotta">
+                Blue Glazed Terracotta
+              </option>
+              <option value="blue_ice">Blue Ice</option>
+              <option value="blue_orchid">Blue Orchid</option>
+              <option value="blue_shulker_box">Blue Shulker Box</option>
+              <option value="blue_stained_glass">Blue Stained Glass</option>
+              <option value="blue_stained_glass_pane">
+                Blue Stained Glass Pane
+              </option>
+              <option value="blue_terracotta">Blue Terracotta</option>
+              <option value="blue_wool">Blue Wool</option>
+              <option value="bone">Bone</option>
+              <option value="bone_block">Bone Block</option>
+              <option value="bone_meal">Bone Meal</option>
+              <option value="book">Book</option>
+              <option value="bookshelf">Bookshelf</option>
+              <option value="bow">Bow</option>
+              <option value="bowl">Bowl</option>
+              <option value="brain_coral">Brain Coral Plant (Pink)</option>
+              <option value="brain_coral_block">
+                Brain Coral Block (Pink)
+              </option>
+              <option value="brain_coral_fan">Brain Coral Fan (Pink)</option>
+              <option value="bread">Bread</option>
+              <option value="brewing_stand">Brewing Stand</option>
+              <option value="brick">Brick</option>
+              <option value="brick_slab">Bricks Slab</option>
+              <option value="brick_stairs">Brick Stairs</option>
+              <option value="brick_wall">Brick Wall</option>
+              <option value="bricks">Bricks</option>
+              <option value="brown_banner">Brown Banner</option>
+              <option value="brown_bed">Brown Bed</option>
+              <option value="brown_carpet">Brown Carpet</option>
+              <option value="brown_concrete">Brown Concrete</option>
+              <option value="brown_concrete_powder">
+                Brown Concrete Powder
+              </option>
+              <option value="brown_dye">Brown Dye</option>
+              <option value="brown_glazed_terracotta">
+                Brown Glazed Terracotta
+              </option>
+              <option value="brown_mushroom">Brown Mushroom</option>
+              <option value="brown_mushroom_block">Brown Mushroom Block</option>
+              <option value="brown_shulker_box">Brown Shulker Box</option>
+              <option value="brown_stained_glass">Brown Stained Glass</option>
+              <option value="brown_stained_glass_pane">
+                Brown Stained Glass Pane
+              </option>
+              <option value="brown_terracotta">Brown Terracotta</option>
+              <option value="brown_wool">Brown Wool</option>
+              <option value="bubble_coral">Bubble Coral Plant (Purple)</option>
+              <option value="bubble_coral_block">
+                Bubble Coral Block (Purple)
+              </option>
+              <option value="bubble_coral_fan">
+                Bubble Coral Fan (Purple)
+              </option>
+              <option value="bucket">Bucket</option>
+              <option value="cactus">Cactus</option>
+              <option value="cake">Cake</option>
+              <option value="campfire">Campfire</option>
+              <option value="carrot">Carrot</option>
+              <option value="carrot_on_a_stick">Carrot on a Stick</option>
+              <option value="cartography_table">Cartography Table</option>
+              <option value="carved_pumpkin">Carved Pumpkin</option>
+              <option value="cat_spawn_egg">Spawn Cat</option>
+              <option value="cauldron">Cauldron</option>
+              <option value="cave_spider_spawn_egg">Spawn Cave Spider</option>
+              <option value="chain">Chain</option>
+              <option value="chain_command_block">Chain Command Block</option>
+              <option value="chainmail_boots">Chainmail Boots</option>
+              <option value="chainmail_chestplate">Chainmail Chestplate</option>
+              <option value="chainmail_helmet">Chainmail Helmet</option>
+              <option value="chainmail_leggings">Chainmail Leggings</option>
+              <option value="charcoal">Charcoal</option>
+              <option value="chest">Chest</option>
+              <option value="chest_minecart">Minecart with Chest</option>
+              <option value="chicken">Raw Chicken</option>
+              <option value="chicken_spawn_egg">Spawn Chicken</option>
+              <option value="chipped_anvil">Chipped Anvil</option>
+              <option value="chiseled_nether_bricks">
+                Chiseled Nether Bricks
+              </option>
+              <option value="chiseled_polished_blackstone">
+                Chiseled Polished Blackstone
+              </option>
+              <option value="chiseled_quartz_block">
+                Chiseled Quartz Block
+              </option>
+              <option value="chiseled_red_sandstone">
+                Chiseled Red Sandstone
+              </option>
+              <option value="chiseled_sandstone">Chiseled Sandstone</option>
+              <option value="chiseled_stone_bricks">
+                Chiseled Stone Bricks
+              </option>
+              <option value="chorus_flower">Chorus Flower</option>
+              <option value="chorus_fruit">Chorus Fruit</option>
+              <option value="chorus_plant">Chorus Plant</option>
+              <option value="clay">Clay</option>
+              <option value="clay_ball">Clay Ball</option>
+              <option value="clock">Clock</option>
+              <option value="coal">Coal</option>
+              <option value="coal_block">Block of Coal</option>
+              <option value="coal_ore">Coal Ore</option>
+              <option value="coarse_dirt">Coarse Dirt</option>
+              <option value="cobblestone">Cobblestone</option>
+              <option value="cobblestone_slab">Cobblestone Slab</option>
+              <option value="cobblestone_stairs">Cobblestone Stairs</option>
+              <option value="cobblestone_wall">Cobblestone Wall</option>
+              <option value="cobweb">Cobweb</option>
+              <option value="cocoa_beans">Cocoa Beans</option>
+              <option value="cod">Raw Cod</option>
+              <option value="cod_bucket">Cod Bucket</option>
+              <option value="cod_spawn_egg">Spawn Cod</option>
+              <option value="command_block">Command Block</option>
+              <option value="command_block_minecart">
+                Minecart with Command Block
+              </option>
+              <option value="comparator">Redstone Comparator</option>
+              <option value="compass">Compass</option>
+              <option value="composter">Composter</option>
+              <option value="conduit">Conduit</option>
+              <option value="cooked_beef">Steak</option>
+              <option value="cooked_chicken">Cooked Chicken</option>
+              <option value="cooked_cod">Cooked Cod</option>
+              <option value="cooked_mutton">Cooked Mutton</option>
+              <option value="cooked_porkchop">Cooked Porkchop</option>
+              <option value="cooked_rabbit">Cooked Rabbit</option>
+              <option value="cooked_salmon">Cooked Salmon</option>
+              <option value="cookie">Cookie</option>
+              <option value="cornflower">Cornflower</option>
+              <option value="cow_spawn_egg">Spawn Cow</option>
+              <option value="cracked_nether_bricks">
+                Cracked Nether Bricks
+              </option>
+              <option value="cracked_polished_blackstone_bricks">
+                Cracked Polished Blackstone Bricks
+              </option>
+              <option value="cracked_stone_bricks">Cracked Stone Bricks</option>
+              <option value="crafting_table">Crafting Table</option>
+              <option value="creeper_banner_pattern">
+                Creeper Banner Pattern
+              </option>
+              <option value="creeper_head">Creeper Head</option>
+              <option value="creeper_spawn_egg">Spawn Creeper</option>
+              <option value="crimson_button">Crimson Button</option>
+              <option value="crimson_door">Crimson Door</option>
+              <option value="crimson_fence">Crimson Fence</option>
+              <option value="crimson_fence_gate">Crimson Fence Gate</option>
+              <option value="crimson_fungus">Crimson Fungus</option>
+              <option value="crimson_hyphae">Crimson Hyphae</option>
+              <option value="crimson_nylium">Crimson Nylium</option>
+              <option value="crimson_planks">Crimson Planks</option>
+              <option value="crimson_pressure_plate">
+                Crimson Pressure Plate
+              </option>
+              <option value="crimson_roots">Crimson Roots</option>
+              <option value="crimson_sign">Crimson Sign</option>
+              <option value="crimson_slab">Crimson Slab</option>
+              <option value="crimson_stairs">Crimson Stairs</option>
+              <option value="crimson_stem">Crimson Stem</option>
+              <option value="crimson_trapdoor">Crimson Trapdoor</option>
+              <option value="crossbow">Crossbow</option>
+              <option value="crying_obsidian">Crying Obsidian</option>
+              <option value="cut_red_sandstone">Cut Red Sandstone</option>
+              <option value="cut_red_sandstone_slab">
+                Cut Red Sandstone Slab
+              </option>
+              <option value="cut_sandstone">Cut Sandstone</option>
+              <option value="cut_sandstone_slab">Cut Sandstone Slab</option>
+              <option value="cyan_banner">Cyan Banner</option>
+              <option value="cyan_bed">Cyan Bed</option>
+              <option value="cyan_carpet">Cyan Carpet</option>
+              <option value="cyan_concrete">Cyan Concrete</option>
+              <option value="cyan_concrete_powder">Cyan Concrete Powder</option>
+              <option value="cyan_dye">Cyan Dye</option>
+              <option value="cyan_glazed_terracotta">
+                Cyan Glazed Terracotta
+              </option>
+              <option value="cyan_shulker_box">Cyan Shulker Box</option>
+              <option value="cyan_stained_glass">Cyan Stained Glass</option>
+              <option value="cyan_stained_glass_pane">
+                Cyan Stained Glass Pane
+              </option>
+              <option value="cyan_terracotta">Cyan Terracotta</option>
+              <option value="cyan_wool">Cyan Wool</option>
+              <option value="damaged_anvil">Damaged Anvil</option>
+              <option value="dandelion">Dandelion</option>
+              <option value="dark_oak_boat">Dark Oak Boat</option>
+              <option value="dark_oak_button">Dark Oak Button</option>
+              <option value="dark_oak_door">Dark Oak Door</option>
+              <option value="dark_oak_fence">Dark Oak Fence</option>
+              <option value="dark_oak_fence_gate">Dark Oak Fence Gate</option>
+              <option value="dark_oak_leaves">Dark Oak Leaves</option>
+              <option value="dark_oak_log">Dark Oak Log</option>
+              <option value="dark_oak_planks">Dark Oak Planks</option>
+              <option value="dark_oak_pressure_plate">
+                Dark Oak Pressure Plate
+              </option>
+              <option value="dark_oak_sapling">Dark Oak Sapling</option>
+              <option value="dark_oak_sign">Dark Oak Sign</option>
+              <option value="dark_oak_slab">Dark Oak Slab</option>
+              <option value="dark_oak_stairs">Wooden Stairs (Dark Oak)</option>
+              <option value="dark_oak_trapdoor">Dark Oak Trapdoor</option>
+              <option value="dark_oak_wood">Dark Oak Wood</option>
+              <option value="dark_prismarine">Dark Prismarine</option>
+              <option value="dark_prismarine_slab">Dark Prismarine Slab</option>
+              <option value="dark_prismarine_stairs">
+                Dark Prismarine Stairs
+              </option>
+              <option value="daylight_detector">Daylight Detector</option>
+              <option value="dead_brain_coral">Dead Brain Coral</option>
+              <option value="dead_brain_coral_block">
+                Dead Brain Coral Block
+              </option>
+              <option value="dead_brain_coral_fan">Dead Brain Coral Fan</option>
+              <option value="dead_bubble_coral">Dead Bubble Coral</option>
+              <option value="dead_bubble_coral_block">
+                Dead Bubble Coral Block
+              </option>
+              <option value="dead_bubble_coral_fan">
+                Dead Bubble Coral Fan
+              </option>
+              <option value="dead_bush">Dead Bush</option>
+              <option value="dead_fire_coral">Dead Fire Coral</option>
+              <option value="dead_fire_coral_block">
+                Dead Fire Coral Block
+              </option>
+              <option value="dead_fire_coral_fan">Dead Fire Coral Fan</option>
+              <option value="dead_horn_coral">Dead Horn Coral</option>
+              <option value="dead_horn_coral_block">
+                Dead Horn Coral Block
+              </option>
+              <option value="dead_horn_coral_fan">Dead Horn Coral Fan</option>
+              <option value="dead_tube_coral">Dead Tube Coral</option>
+              <option value="dead_tube_coral_block">
+                Dead Tube Coral Block
+              </option>
+              <option value="dead_tube_coral_fan">Dead Tube Coral Fan</option>
+              <option value="debug_stick">Debug Stick</option>
+              <option value="detector_rail">Detector Rail</option>
+              <option value="diamond">Diamond</option>
+              <option value="diamond_axe">Diamond Axe</option>
+              <option value="diamond_block">Diamond Block</option>
+              <option value="diamond_boots">Diamond Boots</option>
+              <option value="diamond_chestplate">Diamond Chestplate</option>
+              <option value="diamond_helmet">Diamond Helmet</option>
+              <option value="diamond_hoe">Diamond Hoe</option>
+              <option value="diamond_horse_armor">Diamond Horse Armor</option>
+              <option value="diamond_leggings">Diamond Leggings</option>
+              <option value="diamond_ore">Diamond Ore</option>
+              <option value="diamond_pickaxe">Diamond Pickaxe</option>
+              <option value="diamond_shovel">Diamond Shovel</option>
+              <option value="diamond_sword">Diamond Sword</option>
+              <option value="diorite">Diorite</option>
+              <option value="diorite_slab">Diorite Slab</option>
+              <option value="diorite_stairs">Diorite Stairs</option>
+              <option value="diorite_wall">Diorite Wall</option>
+              <option value="dirt">Dirt</option>
+              <option value="dispenser">Dispenser</option>
+              <option value="dolphin_spawn_egg">Spawn Dolphin</option>
+              <option value="donkey_spawn_egg">Spawn Donkey</option>
+              <option value="dragon_breath">Dragon's Breath</option>
+              <option value="dragon_egg">Dragon Egg</option>
+              <option value="dragon_head">Dragon Head</option>
+              <option value="dried_kelp">Dried Kelp</option>
+              <option value="dried_kelp_block">Dried Kelp Block</option>
+              <option value="dropper">Dropper</option>
+              <option value="drowned_spawn_egg">Spawn Drowned Zombie</option>
+              <option value="egg">Egg</option>
+              <option value="elder_guardian_spawn_egg">
+                Spawn Elder Guardian
+              </option>
+              <option value="elytra">Elytra</option>
+              <option value="emerald">Emerald</option>
+              <option value="emerald_block">Emerald Block</option>
+              <option value="emerald_ore">Emerald Ore</option>
+              <option value="enchanted_book">Enchanted Book</option>
+              <option value="enchanted_golden_apple">
+                Enchanted Golden Apple
+              </option>
+              <option value="enchanting_table">Enchantment Table</option>
+              <option value="end_crystal">End Crystal</option>
+              <option value="end_portal_frame">End Portal Frame</option>
+              <option value="end_rod">End Rod</option>
+              <option value="end_stone">End Stone</option>
+              <option value="end_stone_brick_slab">End Stone Brick Slab</option>
+              <option value="end_stone_brick_stairs">
+                End Stone Brick Stairs
+              </option>
+              <option value="end_stone_brick_wall">End Stone Brick Wall</option>
+              <option value="end_stone_bricks">End Stone Bricks</option>
+              <option value="ender_chest">Ender Chest</option>
+              <option value="ender_eye">Eye of Ender</option>
+              <option value="ender_pearl">Ender Pearl</option>
+              <option value="enderman_spawn_egg">Spawn Enderman</option>
+              <option value="endermite_spawn_egg">Spawn Endermite</option>
+              <option value="evoker_spawn_egg">Spawn Evoker</option>
+              <option value="experience_bottle">Bottle o' Enchanting</option>
+              <option value="farmland">Farmland</option>
+              <option value="feather">Feather</option>
+              <option value="fermented_spider_eye">Fermented Spider Eye</option>
+              <option value="fern">Fern</option>
+              <option value="filled_map">Filled Map</option>
+              <option value="fire_charge">Fire Charge</option>
+              <option value="fire_coral">Fire Coral Plant (Red)</option>
+              <option value="fire_coral_block">Fire Coral Block (Red)</option>
+              <option value="fire_coral_fan">Fire Coral Fan (Red)</option>
+              <option value="firework_rocket">Firework Rocket</option>
+              <option value="firework_star">Firework Star</option>
+              <option value="fishing_rod">Fishing Rod</option>
+              <option value="fletching_table">Fletching Table</option>
+              <option value="flint">Flint</option>
+              <option value="flint_and_steel">Flint and Steel</option>
+              <option value="flower_banner_pattern">
+                Flower Banner Pattern
+              </option>
+              <option value="flower_pot">Flower Pot</option>
+              <option value="fox_spawn_egg">Spawn Fox</option>
+              <option value="furnace">Furnace</option>
+              <option value="furnace_minecart">Minecart with Furnace</option>
+              <option value="ghast_spawn_egg">Spawn Ghast</option>
+              <option value="ghast_tear">Ghast Tear</option>
+              <option value="gilded_blackstone">Gilded Blackstone</option>
+              <option value="glass">Glass</option>
+              <option value="glass_bottle">Glass Bottle</option>
+              <option value="glass_pane">Glass Pane</option>
+              <option value="glistering_melon_slice">
+                Glistering Melon Slice
+              </option>
+              <option value="globe_banner_pattern">Globe Banner Pattern</option>
+              <option value="glowstone">Glowstone</option>
+              <option value="glowstone_dust">Glowstone Dust</option>
+              <option value="gold_block">Gold Block</option>
+              <option value="gold_ingot">Gold Ingot</option>
+              <option value="gold_nugget">Gold Nugget</option>
+              <option value="gold_ore">Gold Ore</option>
+              <option value="golden_apple">Golden Apple</option>
+              <option value="golden_axe">Golden Axe</option>
+              <option value="golden_boots">Golden Boots</option>
+              <option value="golden_carrot">Golden Carrot</option>
+              <option value="golden_chestplate">Golden Chestplate</option>
+              <option value="golden_helmet">Golden Helmet</option>
+              <option value="golden_hoe">Golden Hoe</option>
+              <option value="golden_horse_armor">Golden Horse Armor</option>
+              <option value="golden_leggings">Golden Leggings</option>
+              <option value="golden_pickaxe">Golden Pickaxe</option>
+              <option value="golden_shovel">Golden Shovel</option>
+              <option value="golden_sword">Golden Sword</option>
+              <option value="granite">Granite</option>
+              <option value="granite_slab">Granite Slab</option>
+              <option value="granite_stairs">Granite Stairs</option>
+              <option value="granite_wall">Granite Wall</option>
+              <option value="grass">Grass</option>
+              <option value="grass_block">Grass Block</option>
+              <option value="grass_path">Grass Path</option>
+              <option value="gravel">Gravel</option>
+              <option value="gray_banner">Gray Banner</option>
+              <option value="gray_bed">Gray Bed</option>
+              <option value="gray_carpet">Gray Carpet</option>
+              <option value="gray_concrete">Gray Concrete</option>
+              <option value="gray_concrete_powder">Gray Concrete Powder</option>
+              <option value="gray_dye">Gray Dye</option>
+              <option value="gray_glazed_terracotta">
+                Gray Glazed Terracotta
+              </option>
+              <option value="gray_shulker_box">Gray Shulker Box</option>
+              <option value="gray_stained_glass">Gray Stained Glass</option>
+              <option value="gray_stained_glass_pane">
+                Gray Stained Glass Pane
+              </option>
+              <option value="gray_terracotta">Gray Terracotta</option>
+              <option value="gray_wool">Gray Wool</option>
+              <option value="green_banner">Green Banner</option>
+              <option value="green_bed">Green Bed</option>
+              <option value="green_carpet">Green Carpet</option>
+              <option value="green_concrete">Green Concrete</option>
+              <option value="green_concrete_powder">
+                Green Concrete Powder
+              </option>
+              <option value="green_dye">Green Dye</option>
+              <option value="green_glazed_terracotta">
+                Green Glazed Terracotta
+              </option>
+              <option value="green_shulker_box">Green Shulker Box</option>
+              <option value="green_stained_glass">Green Stained Glass</option>
+              <option value="green_stained_glass_pane">
+                Green Stained Glass Pane
+              </option>
+              <option value="green_terracotta">Green Terracotta</option>
+              <option value="green_wool">Green Wool</option>
+              <option value="grindstone">Grindstone</option>
+              <option value="guardian_spawn_egg">Spawn Guardian</option>
+              <option value="gunpowder">Gunpowder</option>
+              <option value="hay_block">Hay Bale</option>
+              <option value="heart_of_the_sea">Heart of the Sea</option>
+              <option value="heavy_weighted_pressure_plate">
+                Weighted Pressure Plate (heavy)
+              </option>
+              <option value="hoglin_spawn_egg">Spawn Hoglin</option>
+              <option value="honey_block">Honey Block</option>
+              <option value="honey_bottle">Honey Bottle</option>
+              <option value="honeycomb">Honeycomb</option>
+              <option value="honeycomb_block">Honeycomb Block</option>
+              <option value="hopper">Hopper</option>
+              <option value="hopper_minecart">Minecart with Hopper</option>
+              <option value="horn_coral">Horn Coral Plant (Yellow)</option>
+              <option value="horn_coral_block">
+                Horn Coral Block (Yellow)
+              </option>
+              <option value="horn_coral_fan">Horn Coral Fan (Yellow)</option>
+              <option value="horse_spawn_egg">Spawn Horse</option>
+              <option value="husk_spawn_egg">Spawn Husk</option>
+              <option value="ice">Ice</option>
+              <option value="infested_chiseled_stone_bricks">
+                Infested Chiseled Stone Bricks
+              </option>
+              <option value="infested_cobblestone">Infested Cobblestone</option>
+              <option value="infested_cracked_stone_bricks">
+                Infested Cracked Stone Bricks
+              </option>
+              <option value="infested_mossy_stone_bricks">
+                Infested Mossy Stone Bricks
+              </option>
+              <option value="infested_stone">Infested Stone</option>
+              <option value="infested_stone_bricks">
+                Infested Stone Bricks
+              </option>
+              <option value="ink_sac">Ink Sac</option>
+              <option value="iron_axe">Iron Axe</option>
+              <option value="iron_bars">Iron Bars</option>
+              <option value="iron_block">Iron Block</option>
+              <option value="iron_boots">Iron Boots</option>
+              <option value="iron_chestplate">Iron Chestplate</option>
+              <option value="iron_door">Iron Door</option>
+              <option value="iron_helmet">Iron Helmet</option>
+              <option value="iron_hoe">Iron Hoe</option>
+              <option value="iron_horse_armor">Iron Horse Armor</option>
+              <option value="iron_ingot">Iron Ingot</option>
+              <option value="iron_leggings">Iron Leggings</option>
+              <option value="iron_nugget">Iron Nugget</option>
+              <option value="iron_ore">Iron Ore</option>
+              <option value="iron_pickaxe">Iron Pickaxe</option>
+              <option value="iron_shovel">Iron Shovel</option>
+              <option value="iron_sword">Iron Sword</option>
+              <option value="iron_trapdoor">Iron Trap Door</option>
+              <option value="item_frame">Item Frame</option>
+              <option value="jack_o_lantern">Jack o'Lantern</option>
+              <option value="jigsaw">Jigsaw Block</option>
+              <option value="jukebox">Jukebox</option>
+              <option value="jungle_boat">Jungle Boat</option>
+              <option value="jungle_button">Jungle Button</option>
+              <option value="jungle_door">Jungle Door</option>
+              <option value="jungle_fence">Jungle Fence</option>
+              <option value="jungle_fence_gate">Jungle Fence Gate</option>
+              <option value="jungle_leaves">Jungle Leaves</option>
+              <option value="jungle_log">Jungle Log</option>
+              <option value="jungle_planks">Jungle Planks</option>
+              <option value="jungle_pressure_plate">
+                Jungle Pressure Plate
+              </option>
+              <option value="jungle_sapling">Jungle Sapling</option>
+              <option value="jungle_sign">Jungle Sign</option>
+              <option value="jungle_slab">Jungle Slab</option>
+              <option value="jungle_stairs">Jungle Wood Stairs</option>
+              <option value="jungle_trapdoor">Jungle Trapdoor</option>
+              <option value="jungle_wood">Jungle Wood</option>
+              <option value="kelp">Kelp</option>
+              <option value="knowledge_book">Knowledge Book</option>
+              <option value="ladder">Ladder</option>
+              <option value="lantern">Lantern</option>
+              <option value="lapis_block">Lapis Lazuli Block</option>
+              <option value="lapis_lazuli">Lapis Lazuli</option>
+              <option value="lapis_ore">Lapis Lazuli Ore</option>
+              <option value="large_fern">Large Fern</option>
+              <option value="lava_bucket">Lava Bucket</option>
+              <option value="lead">Lead</option>
+              <option value="leather">Leather</option>
+              <option value="leather_boots">Leather Boots</option>
+              <option value="leather_chestplate">Leather Tunic</option>
+              <option value="leather_helmet">Leather Cap</option>
+              <option value="leather_horse_armor">Leather Horse Armor</option>
+              <option value="leather_leggings">Leather Pants</option>
+              <option value="lectern">Lectern</option>
+              <option value="lever">Lever</option>
+              <option value="light_blue_banner">Light Blue Banner</option>
+              <option value="light_blue_bed">Light Blue Bed</option>
+              <option value="light_blue_carpet">Light Blue Carpet</option>
+              <option value="light_blue_concrete">Light Blue Concrete</option>
+              <option value="light_blue_concrete_powder">
+                Light Blue Concrete Powder
+              </option>
+              <option value="light_blue_dye">Light Blue Dye</option>
+              <option value="light_blue_glazed_terracotta">
+                Light Blue Glazed Terracotta
+              </option>
+              <option value="light_blue_shulker_box">
+                Light Blue Shulker Box
+              </option>
+              <option value="light_blue_stained_glass">
+                Light Blue Stained Glass
+              </option>
+              <option value="light_blue_stained_glass_pane">
+                Light Blue Stained Glass Pane
+              </option>
+              <option value="light_blue_terracotta">
+                Light Blue Terracotta
+              </option>
+              <option value="light_blue_wool">Light Blue Wool</option>
+              <option value="light_gray_banner">Light Gray Banner</option>
+              <option value="light_gray_bed">Light Gray Bed</option>
+              <option value="light_gray_carpet">Light Gray Carpet</option>
+              <option value="light_gray_concrete">Light Gray Concrete</option>
+              <option value="light_gray_concrete_powder">
+                Light Gray Concrete Powder
+              </option>
+              <option value="light_gray_dye">Light Gray Dye</option>
+              <option value="light_gray_glazed_terracotta">
+                Light Gray Glazed Terracotta
+              </option>
+              <option value="light_gray_shulker_box">
+                Light Gray Shulker Box
+              </option>
+              <option value="light_gray_stained_glass">
+                Light Gray Stained Glass
+              </option>
+              <option value="light_gray_stained_glass_pane">
+                Light Gray Stained Glass Pane
+              </option>
+              <option value="light_gray_terracotta">
+                Light Gray Terracotta
+              </option>
+              <option value="light_gray_wool">Light Gray Wool</option>
+              <option value="light_weighted_pressure_plate">
+                Weighted Pressure Plate (light)
+              </option>
+              <option value="lilac">Lilac</option>
+              <option value="lily_of_the_valley">Lily of the Valley</option>
+              <option value="lily_pad">Lily Pad</option>
+              <option value="lime_banner">Lime Banner</option>
+              <option value="lime_bed">Lime Bed</option>
+              <option value="lime_carpet">Lime Carpet</option>
+              <option value="lime_concrete">Lime Concrete</option>
+              <option value="lime_concrete_powder">Lime Concrete Powder</option>
+              <option value="lime_dye">Lime Dye</option>
+              <option value="lime_glazed_terracotta">
+                Lime Glazed Terracotta
+              </option>
+              <option value="lime_shulker_box">Lime Shulker Box</option>
+              <option value="lime_stained_glass">Lime Stained Glass</option>
+              <option value="lime_stained_glass_pane">
+                Lime Stained Glass Pane
+              </option>
+              <option value="lime_terracotta">Lime Terracotta</option>
+              <option value="lime_wool">Lime Wool</option>
+              <option value="lingering_potion">Lingering Potion</option>
+              <option value="llama_spawn_egg">Spawn Llama</option>
+              <option value="lodestone">Lodestone</option>
+              <option value="loom">Loom</option>
+              <option value="magenta_banner">Magenta Banner</option>
+              <option value="magenta_bed">Magenta Bed</option>
+              <option value="magenta_carpet">Magenta Carpet</option>
+              <option value="magenta_concrete">Magenta Concrete</option>
+              <option value="magenta_concrete_powder">
+                Magenta Concrete Powder
+              </option>
+              <option value="magenta_dye">Magenta Dye</option>
+              <option value="magenta_glazed_terracotta">
+                Magenta Glazed Terracotta
+              </option>
+              <option value="magenta_shulker_box">Magenta Shulker Box</option>
+              <option value="magenta_stained_glass">
+                Magenta Stained Glass
+              </option>
+              <option value="magenta_stained_glass_pane">
+                Magenta Stained Glass Pane
+              </option>
+              <option value="magenta_terracotta">Magenta Terracotta</option>
+              <option value="magenta_wool">Magenta Wool</option>
+              <option value="magma_block">Magma Block</option>
+              <option value="magma_cream">Magma Cream</option>
+              <option value="magma_cube_spawn_egg">Spawn Magma Cube</option>
+              <option value="map">Map</option>
+              <option value="melon">Melon</option>
+              <option value="melon_seeds">Melon Seeds</option>
+              <option value="melon_slice">Melon Slice</option>
+              <option value="milk_bucket">Milk Bucket</option>
+              <option value="minecart">Minecart</option>
+              <option value="mojang_banner_pattern">
+                Mojang Banner Pattern
+              </option>
+              <option value="mooshroom_spawn_egg">Spawn Mooshroom</option>
+              <option value="mossy_cobblestone">Mossy Cobblestone</option>
+              <option value="mossy_cobblestone_slab">
+                Mossy Cobblestone Slab
+              </option>
+              <option value="mossy_cobblestone_stairs">
+                Mossy Cobblestone Stairs
+              </option>
+              <option value="mossy_cobblestone_wall">
+                Mossy Cobblestone Wall
+              </option>
+              <option value="mossy_stone_brick_slab">
+                Mossy Stone Brick Slab
+              </option>
+              <option value="mossy_stone_brick_stairs">
+                Mossy Stone Brick Stairs
+              </option>
+              <option value="mossy_stone_brick_wall">
+                Mossy Stone Brick Wall
+              </option>
+              <option value="mossy_stone_bricks">Mossy Stone Bricks</option>
+              <option value="mule_spawn_egg">Spawn Mule</option>
+              <option value="mushroom_stem">Mushroom Stem</option>
+              <option value="mushroom_stem">Mushroom Stem</option>
+              <option value="mushroom_stew">Mushroom Stew</option>
+              <option value="music_disc_11">Music Disc 11</option>
+              <option value="music_disc_13">Music Disc 13</option>
+              <option value="music_disc_blocks">Music Disc Blocks</option>
+              <option value="music_disc_cat">Music Disc Cat</option>
+              <option value="music_disc_chirp">Music Disc Chirp</option>
+              <option value="music_disc_far">Music Disc Far</option>
+              <option value="music_disc_mall">Music Disc Mall</option>
+              <option value="music_disc_mellohi">Music Disc Mellohi</option>
+              <option value="music_disc_pigstep">Music Disc Pigstep</option>
+              <option value="music_disc_stal">Music Disc Stal</option>
+              <option value="music_disc_strad">Music Disc Strad</option>
+              <option value="music_disc_wait">Music Disc Wait</option>
+              <option value="music_disc_ward">Music Disc Ward</option>
+              <option value="mutton">Raw Mutton</option>
+              <option value="mycelium">Mycelium</option>
+              <option value="name_tag">Name Tag</option>
+              <option value="nautilus_shell">Nautilus Shell</option>
+              <option value="nether_brick">Nether Brick</option>
+              <option value="nether_brick_fence">Nether Brick Fence</option>
+              <option value="nether_brick_slab">Nether Bricks Slab</option>
+              <option value="nether_brick_stairs">Nether Brick Stairs</option>
+              <option value="nether_brick_wall">Nether Brick Wall</option>
+              <option value="nether_bricks">Nether Bricks</option>
+              <option value="nether_gold_ore">Nether Gold Ore</option>
+              <option value="nether_quartz_ore">Nether Quartz Ore</option>
+              <option value="nether_sprouts">Nether Sprouts</option>
+              <option value="nether_star">Nether Star</option>
+              <option value="nether_wart">Nether Wart</option>
+              <option value="nether_wart_block">Nether Wart Block</option>
+              <option value="netherite_axe">Netherite Axe</option>
+              <option value="netherite_block">Netherite Block</option>
+              <option value="netherite_boots">Netherite Boots</option>
+              <option value="netherite_chestplate">Netherite Chestplate</option>
+              <option value="netherite_helmet">Netherite Helmet</option>
+              <option value="netherite_hoe">Netherite Hoe</option>
+              <option value="netherite_ingot">Netherite Ingot</option>
+              <option value="netherite_leggings">Netherite Leggings</option>
+              <option value="netherite_pickaxe">Netherite Pickaxe</option>
+              <option value="netherite_scrap">Netherite Scrap</option>
+              <option value="netherite_shovel">Netherite Shovel</option>
+              <option value="netherite_sword">Netherite Sword</option>
+              <option value="netherrack">Netherrack</option>
+              <option value="note_block">Note Block</option>
+              <option value="oak_boat">Oak Boat</option>
+              <option value="oak_button">Oak Button</option>
+              <option value="oak_door">Oak Door</option>
+              <option value="oak_fence">Oak Fence</option>
+              <option value="oak_fence_gate">Oak Fence Gate</option>
+              <option value="oak_leaves">Oak Leaves</option>
+              <option value="oak_log">Oak Log</option>
+              <option value="oak_planks">Oak Planks</option>
+              <option value="oak_pressure_plate">Oak Pressure Plate</option>
+              <option value="oak_sapling">Oak Sapling</option>
+              <option value="oak_sign">Oak Sign</option>
+              <option value="oak_slab">Oak Slab</option>
+              <option value="oak_stairs">Oak Wood Stairs</option>
+              <option value="oak_trapdoor">Oak Trapdoor</option>
+              <option value="oak_wood">Oak Wood</option>
+              <option value="observer">Observer</option>
+              <option value="obsidian">Obsidian</option>
+              <option value="ocelot_spawn_egg">Spawn Ocelot</option>
+              <option value="orange_banner">Orange Banner</option>
+              <option value="orange_bed">Orange Bed</option>
+              <option value="orange_carpet">Orange Carpet</option>
+              <option value="orange_concrete">Orange Concrete</option>
+              <option value="orange_concrete_powder">
+                Orange Concrete Powder
+              </option>
+              <option value="orange_dye">Orange Dye</option>
+              <option value="orange_glazed_terracotta">
+                Orange Glazed Terracotta
+              </option>
+              <option value="orange_shulker_box">Orange Shulker Box</option>
+              <option value="orange_stained_glass">Orange Stained Glass</option>
+              <option value="orange_stained_glass_pane">
+                Orange Stained Glass Pane
+              </option>
+              <option value="orange_terracotta">Orange Terracotta</option>
+              <option value="orange_tulip">Orange Tulip</option>
+              <option value="orange_wool">Orange Wool</option>
+              <option value="oxeye_daisy">Oxeye Daisy</option>
+              <option value="packed_ice">Packed Ice</option>
+              <option value="painting">Painting</option>
+              <option value="panda_spawn_egg">Spawn Panda</option>
+              <option value="paper">Paper</option>
+              <option value="parrot_spawn_egg">Spawn Parrot</option>
+              <option value="peony">Peony</option>
+              <option value="petrified_oak_slab">Petrified Oak Slab</option>
+              <option value="phantom_membrane">Phantom Membrane</option>
+              <option value="phantom_spawn_egg">Spawn Phantom</option>
+              <option value="pig_spawn_egg">Spawn Pig</option>
+              <option value="piglin_banner_pattern">
+                Piglin Banner Pattern
+              </option>
+              <option value="piglin_brute_spawn_egg">Spawn Piglin Brute</option>
+              <option value="piglin_spawn_egg">Spawn Piglin</option>
+              <option value="pillager_spawn_egg">Spawn Pillager</option>
+              <option value="pink_banner">Pink Banner</option>
+              <option value="pink_bed">Pink Bed</option>
+              <option value="pink_carpet">Pink Carpet</option>
+              <option value="pink_concrete">Pink Concrete</option>
+              <option value="pink_concrete_powder">Pink Concrete Powder</option>
+              <option value="pink_dye">Pink Dye</option>
+              <option value="pink_glazed_terracotta">
+                Pink Glazed Terracotta
+              </option>
+              <option value="pink_shulker_box">Pink Shulker Box</option>
+              <option value="pink_stained_glass">Pink Stained Glass</option>
+              <option value="pink_stained_glass_pane">
+                Pink Stained Glass Pane
+              </option>
+              <option value="pink_terracotta">Pink Terracotta</option>
+              <option value="pink_tulip">Pink Tulip</option>
+              <option value="pink_wool">Pink Wool</option>
+              <option value="piston">Piston</option>
+              <option value="player_head">Player Head</option>
+              <option value="podzol">Podzol</option>
+              <option value="poisonous_potato">Poisonous Potato</option>
+              <option value="polar_bear_spawn_egg">Spawn Polar Bear</option>
+              <option value="polished_andesite">Polished Andesite</option>
+              <option value="polished_andesite_slab">
+                Polished Andesite Slab
+              </option>
+              <option value="polished_andesite_stairs">
+                Polished Andesite Stairs
+              </option>
+              <option value="polished_basalt">Polished Basalt</option>
+              <option value="polished_blackstone">Polished Blackstone</option>
+              <option value="polished_blackstone_brick_slab">
+                Polished Blackstone Brick Slab
+              </option>
+              <option value="polished_blackstone_brick_stairs">
+                Polished Blackstone Brick Stairs
+              </option>
+              <option value="polished_blackstone_brick_wall">
+                Polished Blackstone Brick Wall
+              </option>
+              <option value="polished_blackstone_bricks">
+                Polished Blackstone Bricks
+              </option>
+              <option value="polished_blackstone_button">
+                Polished Blackstone Button
+              </option>
+              <option value="polished_blackstone_pressure_plate">
+                Polished Blackstone Pressure Plate
+              </option>
+              <option value="polished_blackstone_slab">
+                Polished Blackstone Slab
+              </option>
+              <option value="polished_blackstone_stairs">
+                Polished Blackstone Stairs
+              </option>
+              <option value="polished_blackstone_wall">
+                Polished Blackstone Wall
+              </option>
+              <option value="polished_diorite">Polished Diorite</option>
+              <option value="polished_diorite_slab">
+                Polished Diorite Slab
+              </option>
+              <option value="polished_diorite_stairs">
+                Polished Diorite Stairs
+              </option>
+              <option value="polished_granite">Polished Granite</option>
+              <option value="polished_granite_slab">
+                Polished Granite Slab
+              </option>
+              <option value="polished_granite_stairs">
+                Polished Granite Stairs
+              </option>
+              <option value="popped_chorus_fruit">Popped Chorus Fruit</option>
+              <option value="poppy">Poppy</option>
+              <option value="porkchop">Raw Porkchop</option>
+              <option value="potato">Potato</option>
+              <option value="potion">Water Bottle</option>
+              <option value="powered_rail">Powered Rail</option>
+              <option value="prismarine">Prismarine</option>
+              <option value="prismarine_brick_slab">
+                Prismarine Bricks Slab
+              </option>
+              <option value="prismarine_brick_stairs">
+                Prismarine Brick Stairs
+              </option>
+              <option value="prismarine_bricks">Prismarine Bricks</option>
+              <option value="prismarine_crystals">Prismarine Crystals</option>
+              <option value="prismarine_shard">Prismarine Shard</option>
+              <option value="prismarine_slab">Prismarine Slab</option>
+              <option value="prismarine_stairs">Prismarine Stairs</option>
+              <option value="prismarine_wall">Prismarine Wall</option>
+              <option value="pufferfish">Pufferfish</option>
+              <option value="pufferfish_bucket">Pufferfish Bucket</option>
+              <option value="pufferfish_spawn_egg">Spawn Pufferfish</option>
+              <option value="pumpkin">Pumpkin</option>
+              <option value="pumpkin_pie">Pumpkin Pie</option>
+              <option value="pumpkin_seeds">Pumpkin Seeds</option>
+              <option value="purple_banner">Purple Banner</option>
+              <option value="purple_bed">Purple Bed</option>
+              <option value="purple_carpet">Purple Carpet</option>
+              <option value="purple_concrete">Purple Concrete</option>
+              <option value="purple_concrete_powder">
+                Purple Concrete Powder
+              </option>
+              <option value="purple_dye">Purple Dye</option>
+              <option value="purple_glazed_terracotta">
+                Purple Glazed Terracotta
+              </option>
+              <option value="purple_shulker_box">Purple Shulker Box</option>
+              <option value="purple_stained_glass">Purple Stained Glass</option>
+              <option value="purple_stained_glass_pane">
+                Purple Stained Glass Pane
+              </option>
+              <option value="purple_terracotta">Purple Terracotta</option>
+              <option value="purple_wool">Purple Wool</option>
+              <option value="purpur_block">Purpur Block</option>
+              <option value="purpur_pillar">Purpur Pillar</option>
+              <option value="purpur_slab">Purpur Slab</option>
+              <option value="purpur_stairs">Purpur Stairs</option>
+              <option value="quartz">Nether Quartz</option>
+              <option value="quartz_block">Block of Quartz</option>
+              <option value="quartz_bricks">Quartz Bricks</option>
+              <option value="quartz_pillar">Quartz Pillar</option>
+              <option value="quartz_slab">Quartz Slab</option>
+              <option value="quartz_stairs">Quartz Stairs</option>
+              <option value="rabbit">Raw Rabbit</option>
+              <option value="rabbit_foot">Rabbit's Foot</option>
+              <option value="rabbit_hide">Rabbit Hide</option>
+              <option value="rabbit_spawn_egg">Spawn Rabbit</option>
+              <option value="rabbit_stew">Rabbit Stew</option>
+              <option value="rail">Rails</option>
+              <option value="ravager_spawn_egg">Spawn Ravager</option>
+              <option value="red_banner">Red Banner</option>
+              <option value="red_bed">Red Bed</option>
+              <option value="red_carpet">Red Carpet</option>
+              <option value="red_concrete">Red Concrete</option>
+              <option value="red_concrete_powder">Red Concrete Powder</option>
+              <option value="red_dye">Red Dye</option>
+              <option value="red_glazed_terracotta">
+                Red Glazed Terracotta
+              </option>
+              <option value="red_mushroom">Red Mushroom</option>
+              <option value="red_mushroom_block">Red Mushroom Block</option>
+              <option value="red_nether_brick_slab">
+                Red Nether Brick Slab
+              </option>
+              <option value="red_nether_brick_stairs">
+                Red Nether Brick Stairs
+              </option>
+              <option value="red_nether_brick_wall">
+                Red Nether Brick Wall
+              </option>
+              <option value="red_nether_bricks">Red Nether Bricks</option>
+              <option value="red_sand">Red Sand</option>
+              <option value="red_sandstone">Red Sandstone</option>
+              <option value="red_sandstone_slab">Red Sandstone Slab</option>
+              <option value="red_sandstone_stairs">Red Sandstone Stairs</option>
+              <option value="red_sandstone_wall">Red Sandstone Wall</option>
+              <option value="red_shulker_box">Red Shulker Box</option>
+              <option value="red_stained_glass">Red Stained Glass</option>
+              <option value="red_stained_glass_pane">
+                Red Stained Glass Pane
+              </option>
+              <option value="red_terracotta">Red Terracotta</option>
+              <option value="red_tulip">Red Tulip</option>
+              <option value="red_wool">Red Wool</option>
+              <option value="redstone">Redstone Dust</option>
+              <option value="redstone_block">Redstone Block</option>
+              <option value="redstone_lamp">Redstone Lamp</option>
+              <option value="redstone_ore">Redstone Ore</option>
+              <option value="redstone_torch">Redstone Torch</option>
+              <option value="repeater">Redstone Repeater</option>
+              <option value="repeating_command_block">
+                Repeating Command Block
+              </option>
+              <option value="respawn_anchor">Respawn Anchor</option>
+              <option value="rose_bush">Rose Bush</option>
+              <option value="rotten_flesh">Rotten Flesh</option>
+              <option value="saddle">Saddle</option>
+              <option value="salmon">Raw Salmon</option>
+              <option value="salmon_bucket">Salmon Bucket</option>
+              <option value="salmon_spawn_egg">Spawn Salmon</option>
+              <option value="sand">Sand</option>
+              <option value="sandstone">Sandstone</option>
+              <option value="sandstone_slab">Sandstone Slab</option>
+              <option value="sandstone_stairs">Sandstone Stairs</option>
+              <option value="sandstone_wall">Sandstone Wall</option>
+              <option value="scaffolding">Scaffolding</option>
+              <option value="scute">Scute</option>
+              <option value="sea_lantern">Sea Lantern</option>
+              <option value="sea_pickle">Sea Pickle</option>
+              <option value="seagrass">Seagrass</option>
+              <option value="shears">Shears</option>
+              <option value="sheep_spawn_egg">Spawn Sheep</option>
+              <option value="shield">Shield</option>
+              <option value="shroomlight">Shroomlight</option>
+              <option value="shulker_box">Shulker Box</option>
+              <option value="shulker_shell">Shulker Shell</option>
+              <option value="shulker_spawn_egg">Spawn Shulker</option>
+              <option value="silverfish_spawn_egg">Spawn Silverfish</option>
+              <option value="skeleton_horse_spawn_egg">
+                Spawn Skeleton Horse
+              </option>
+              <option value="skeleton_skull">Skeleton Skull</option>
+              <option value="skeleton_spawn_egg">Spawn Skeleton</option>
+              <option value="skull_banner_pattern">Skull Banner Pattern</option>
+              <option value="slime_ball">Slimeball</option>
+              <option value="slime_block">Slime Block</option>
+              <option value="slime_spawn_egg">Spawn Slime</option>
+              <option value="smithing_table">Smithing Table</option>
+              <option value="smoker">Smoker</option>
+              <option value="smooth_quartz">Smooth Quartz</option>
+              <option value="smooth_quartz_slab">Smooth Quartz Slab</option>
+              <option value="smooth_quartz_slab">Smooth Quartz Slab</option>
+              <option value="smooth_quartz_stairs">Smooth Quartz Stairs</option>
+              <option value="smooth_red_sandstone">Smooth Red Sandstone</option>
+              <option value="smooth_red_sandstone_slab">
+                Smooth Red Sandstone Slab
+              </option>
+              <option value="smooth_red_sandstone_slab">
+                Smooth Red Sandstone Slab
+              </option>
+              <option value="smooth_red_sandstone_stairs">
+                Smooth Red Sandstone Stairs
+              </option>
+              <option value="smooth_sandstone">Smooth Sandstone</option>
+              <option value="smooth_sandstone_slab">
+                Smooth Sandstone Slab
+              </option>
+              <option value="smooth_sandstone_slab">
+                Smooth Sandstone Slab
+              </option>
+              <option value="smooth_sandstone_stairs">
+                Smooth Sandstone Stairs
+              </option>
+              <option value="smooth_stone">Smooth Stone</option>
+              <option value="smooth_stone_slab">Smooth Stone Slab</option>
+              <option value="snow">Snow</option>
+              <option value="snow_block">Snow Block</option>
+              <option value="snowball">Snowball</option>
+              <option value="soul_campfire">Soul Campfire</option>
+              <option value="soul_lantern">Soul Lantern</option>
+              <option value="soul_sand">Soul Sand</option>
+              <option value="soul_soil">Soul Soil</option>
+              <option value="soul_torch">Soul Torch</option>
+              <option value="spawner">Spawner</option>
+              <option value="spectral_arrow">Spectral Arrow</option>
+              <option value="spider_eye">Spider Eye</option>
+              <option value="spider_spawn_egg">Spawn Spider</option>
+              <option value="splash_potion">Splash Potion</option>
+              <option value="sponge">Sponge</option>
+              <option value="spruce_boat">Spruce Boat</option>
+              <option value="spruce_button">Spruce Button</option>
+              <option value="spruce_door">Spruce Door</option>
+              <option value="spruce_fence">Spruce Fence</option>
+              <option value="spruce_fence_gate">Spruce Fence Gate</option>
+              <option value="spruce_leaves">Spruce Leaves</option>
+              <option value="spruce_log">Spruce Log</option>
+              <option value="spruce_planks">Spruce Planks</option>
+              <option value="spruce_pressure_plate">
+                Spruce Pressure Plate
+              </option>
+              <option value="spruce_sapling">Spruce Sapling</option>
+              <option value="spruce_sign">Spruce Sign</option>
+              <option value="spruce_slab">Spruce Slab</option>
+              <option value="spruce_stairs">Spruce Wood Stairs</option>
+              <option value="spruce_trapdoor">Spruce Trapdoor</option>
+              <option value="spruce_wood">Spruce Wood</option>
+              <option value="squid_spawn_egg">Spawn Squid</option>
+              <option value="stick">Stick</option>
+              <option value="sticky_piston">Sticky Piston</option>
+              <option value="stone">Stone</option>
+              <option value="stone_axe">Stone Axe</option>
+              <option value="stone_brick_slab">Stone Bricks Slab</option>
+              <option value="stone_brick_stairs">Stone Brick Stairs</option>
+              <option value="stone_brick_wall">Stone Brick Wall</option>
+              <option value="stone_bricks">Stone Bricks</option>
+              <option value="stone_button">Stone Button</option>
+              <option value="stone_hoe">Stone Hoe</option>
+              <option value="stone_pickaxe">Stone Pickaxe</option>
+              <option value="stone_pressure_plate">Stone Pressure Plate</option>
+              <option value="stone_shovel">Stone Shovel</option>
+              <option value="stone_slab">Stone Slab</option>
+              <option value="stone_stairs">Stone Stairs</option>
+              <option value="stone_sword">Stone Sword</option>
+              <option value="stonecutter">Stonecutter</option>
+              <option value="stray_spawn_egg">Spawn Stray</option>
+              <option value="strider_spawn_egg">Spawn Strider</option>
+              <option value="string">String</option>
+              <option value="stripped_acacia_log">Stripped Acacia Log</option>
+              <option value="stripped_acacia_wood">Stripped Acacia Wood</option>
+              <option value="stripped_birch_log">Stripped Birch Log</option>
+              <option value="stripped_birch_wood">Stripped Birch Wood</option>
+              <option value="stripped_crimson_hyphae">
+                Stripped Crimson Hyphae
+              </option>
+              <option value="stripped_crimson_stem">
+                Stripped Crimson Stem
+              </option>
+              <option value="stripped_dark_oak_log">
+                Stripped Dark Oak Log
+              </option>
+              <option value="stripped_dark_oak_wood">
+                Stripped Dark Oak Wood
+              </option>
+              <option value="stripped_jungle_log">Stripped Jungle Log</option>
+              <option value="stripped_jungle_wood">Stripped Jungle Wood</option>
+              <option value="stripped_oak_log">Stripped Oak Log</option>
+              <option value="stripped_oak_wood">Stripped Oak Wood</option>
+              <option value="stripped_spruce_log">Stripped Spruce Log</option>
+              <option value="stripped_spruce_wood">Stripped Spruce Wood</option>
+              <option value="stripped_warped_hyphae">
+                Stripped Warped Hyphae
+              </option>
+              <option value="stripped_warped_stem">Stripped Warped Stem</option>
+              <option value="structure_block">Structure Block</option>
+              <option value="structure_void">Structure Void</option>
+              <option value="sugar">Sugar</option>
+              <option value="sugar_cane">Sugar Cane</option>
+              <option value="sunflower">Sunflower</option>
+              <option value="suspicious_stew">Suspicious Stew</option>
+              <option value="sweet_berries">Sweet Berries</option>
+              <option value="tall_grass">Double Tallgrass</option>
+              <option value="target">Target</option>
+              <option value="terracotta">Terracotta</option>
+              <option value="tipped_arrow">Tipped Arrow</option>
+              <option value="tnt">TNT</option>
+              <option value="tnt_minecart">Minecart with TNT</option>
+              <option value="torch">Torch</option>
+              <option value="totem_of_undying">Totem of Undying</option>
+              <option value="trader_llama_spawn_egg">Spawn Trader Llama</option>
+              <option value="trapped_chest">Trapped Chest</option>
+              <option value="trident">Trident</option>
+              <option value="tripwire_hook">Tripwire Hook</option>
+              <option value="tropical_fish">Tropical Fish</option>
+              <option value="tropical_fish_bucket">Tropical Fish Bucket</option>
+              <option value="tropical_fish_spawn_egg">
+                Spawn Tropical Fish
+              </option>
+              <option value="tube_coral">Tube Coral Plant (Blue)</option>
+              <option value="tube_coral_block">Tube Coral Block(Blue)</option>
+              <option value="tube_coral_fan">Tube Coral Fan (Blue)</option>
+              <option value="turtle_egg">Turtle Egg</option>
+              <option value="turtle_helmet">Turtle Helmet</option>
+              <option value="turtle_spawn_egg">Spawn Turtle</option>
+              <option value="twisting_vines">Twisting Vines</option>
+              <option value="vex_spawn_egg">Spawn Vex</option>
+              <option value="villager_spawn_egg">Spawn Villager</option>
+              <option value="vindicator_spawn_egg">Spawn Vindicator</option>
+              <option value="vine">Vines</option>
+              <option value="wandering_trader_spawn_egg">
+                Spawn Wandering Trader
+              </option>
+              <option value="warped_button">Warped Button</option>
+              <option value="warped_door">Warped Door</option>
+              <option value="warped_fence">Warped Fence</option>
+              <option value="warped_fence_gate">Warped Fence Gate</option>
+              <option value="warped_fungus">Warped Fungus</option>
+              <option value="warped_fungus_on_a_stick">
+                Warped Fungus on a Stick
+              </option>
+              <option value="warped_hyphae">Warped Hyphae</option>
+              <option value="warped_nylium">Warped Nylium</option>
+              <option value="warped_planks">Warped Planks</option>
+              <option value="warped_pressure_plate">
+                Warped Pressure Plate
+              </option>
+              <option value="warped_roots">Warped Roots</option>
+              <option value="warped_sign">Warped Sign</option>
+              <option value="warped_slab">Warped Slab</option>
+              <option value="warped_stairs">Warped Stairs</option>
+              <option value="warped_stem">Warped Stem</option>
+              <option value="warped_trapdoor">Warped Trapdoor</option>
+              <option value="warped_wart_block">Warped Wart Block</option>
+              <option value="water_bucket">Water Bucket</option>
+              <option value="weeping_vines">Weeping Vines</option>
+              <option value="wet_sponge">Wet Sponge</option>
+              <option value="wheat">Wheat</option>
+              <option value="wheat_seeds">Wheat Seeds</option>
+              <option value="white_banner">White Banner</option>
+              <option value="white_bed">White Bed</option>
+              <option value="white_carpet">White Carpet</option>
+              <option value="white_concrete">White Concrete</option>
+              <option value="white_concrete_powder">
+                White Concrete Powder
+              </option>
+              <option value="white_dye">White Dye</option>
+              <option value="white_glazed_terracotta">
+                White Glazed Terracotta
+              </option>
+              <option value="white_shulker_box">White Shulker Box</option>
+              <option value="white_stained_glass">White Stained Glass</option>
+              <option value="white_stained_glass_pane">
+                White Stained Glass Pane
+              </option>
+              <option value="white_terracotta">White Terracotta</option>
+              <option value="white_tulip">White Tulip</option>
+              <option value="white_wool">White Wool</option>
+              <option value="witch_spawn_egg">Spawn Witch</option>
+              <option value="wither_rose">Wither Rose</option>
+              <option value="wither_skeleton_skull">
+                Wither Skeleton Skull
+              </option>
+              <option value="wither_skeleton_spawn_egg">
+                Spawn Wither Skeleton
+              </option>
+              <option value="wolf_spawn_egg">Spawn Wolf</option>
+              <option value="wooden_axe">Wooden Axe</option>
+              <option value="wooden_hoe">Wooden Hoe</option>
+              <option value="wooden_pickaxe">Wooden Pickaxe</option>
+              <option value="wooden_shovel">Wooden Shovel</option>
+              <option value="wooden_sword">Wooden Sword</option>
+              <option value="writable_book">Book and Quill</option>
+              <option value="written_book">Written Book</option>
+              <option value="yellow_banner">Yellow Banner</option>
+              <option value="yellow_bed">Yellow Bed</option>
+              <option value="yellow_carpet">Yellow Carpet</option>
+              <option value="yellow_concrete">Yellow Concrete</option>
+              <option value="yellow_concrete_powder">
+                Yellow Concrete Powder
+              </option>
+              <option value="yellow_dye">Yellow Dye</option>
+              <option value="yellow_glazed_terracotta">
+                Yellow Glazed Terracotta
+              </option>
+              <option value="yellow_shulker_box">Yellow Shulker Box</option>
+              <option value="yellow_stained_glass">Yellow Stained Glass</option>
+              <option value="yellow_stained_glass_pane">
+                Yellow Stained Glass Pane
+              </option>
+              <option value="yellow_terracotta">Yellow Terracotta</option>
+              <option value="yellow_wool">Yellow Wool</option>
+              <option value="zoglin_spawn_egg">Spawn Zoglin</option>
+              <option value="zombie_head">Zombie Head</option>
+              <option value="zombie_horse_spawn_egg">Spawn Zombie Horse</option>
+              <option value="zombie_spawn_egg">Spawn Zombie</option>
+              <option value="zombie_villager_spawn_egg">
+                Spawn Zombie Villager
+              </option>
+              <option value="zombified_piglin_spawn_egg">
+                Spawn Zombiefied Piglin
+              </option>
+            </select>
+            <input type="text" id="filter" placeholder="Filter" />
+          </div>
+        </div>
+        <div class="baseValue input">
+          <label for="baseValue">Base value:</label>
+          <input
+            type="number"
+            min="100000"
+            max="999999"
+            value="100000"
+            id="baseValue"
+          />
+          <span>(6 digits)</span>
+        </div>
+        <div class="buttons">
+          <button id="generate">Generate</button>
+          <button id="download">Download</button>
+        </div>
+        <p id="download-error" class="error">No output to download!</p>
+        <p id="item-error" class="error">No item to selected!</p>
+        <p id="model-error" class="error">No models to be added!</p>
+        <textarea id="output"> </textarea>
+      </div>
+
+      <div id="overlay"></div>
+    </div>
+  </body>
+</html>
