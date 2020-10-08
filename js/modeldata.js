@@ -220,8 +220,6 @@ function generateModelFile() {
     }
     custommodeldata.overrides.push(...predicates);
   }
-  console.log(editModals.length);
-  console.log(item);
   if (item !== "-1" && editModals.length !== 0) {
     outputArea.value = JSON.stringify(custommodeldata, null, 2);
     itemError.style.display = "none";
@@ -263,7 +261,7 @@ String.prototype.trim = function () {
 baseItemFilter.oninput = () => {
   options = baseItemInput.getElementsByTagName("option");
   console.log(options[0].value.toLowerCase());
-  for (let i = 0; i < options.length; i++) {
+  for (let i = options.length - 1; i >= 0; i--) {
     if (options[i].value.toLowerCase().includes(baseItemFilter.value)) {
       options[i].style.display = "block";
       baseItemInput.selectedIndex = i;
