@@ -60,7 +60,7 @@ addModelButton.addEventListener("click", () => {
 
   //add modal inputs
   const nameLabel = document.createElement("label");
-  nameLabel.innerHTML = "Path:";
+  nameLabel.innerHTML = "Name:";
   const nameInput = createElem("input", { type: "text", value: "Model" });
   nameInput.classList.add("name");
 
