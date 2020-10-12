@@ -81,15 +81,44 @@ addVarButton.addEventListener("click", () => {
   });
   baseValueInput.classList.add("base");
 
+  //tooltips
+  const nameToolTip = document.createElement("span")
+  nameToolTip.setAttribute("data-tooltip", "The name of the variable. This will be replaced in your command to the values you set.")
+  nameToolTip.classList.add("in-modal")
+  const nameToolTipIcon = document.createElement("i")
+  nameToolTipIcon.classList.add("far")
+  nameToolTipIcon.classList.add("fa-question-circle")
+
+  const incrementTooltip = document.createElement("span")
+  incrementTooltip.setAttribute("data-tooltip", "The increment of your variable. Every repetition the variable will go up with this number.")
+  incrementTooltip.classList.add("in-modal")
+  const incrementTooltipIcon = document.createElement("i")
+  incrementTooltipIcon.classList.add("far")
+  incrementTooltipIcon.classList.add("fa-question-circle")
+
+  const baseTooltip = document.createElement("span")
+  baseTooltip.setAttribute("data-tooltip", "The base value of your variable. it will start at this value when generating your sequence.")
+  baseTooltip.classList.add("in-modal")
+  const baseTooltipIcon = document.createElement("i")
+  baseTooltipIcon.classList.add("far")
+  baseTooltipIcon.classList.add("fa-question-circle")
+
   //add everything to DOM
+  nameToolTip.appendChild(nameToolTipIcon)
+  incrementTooltip.appendChild(incrementTooltipIcon)
+  baseTooltip.appendChild(baseTooltipIcon)
+
   modalBody.appendChild(nameLabel);
   modalBody.appendChild(nameInput);
+  modalBody.appendChild(nameToolTip)
 
   modalBody.appendChild(incrementLabel);
   modalBody.appendChild(incrementInput);
+  modalBody.appendChild(incrementTooltip)
 
   modalBody.appendChild(baseValueLabel);
   modalBody.appendChild(baseValueInput);
+  modalBody.appendChild(baseTooltip)
 
   varDiv.appendChild(varTitle);
   varDiv.appendChild(buttonsDiv);

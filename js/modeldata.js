@@ -69,12 +69,32 @@ addModelButton.addEventListener("click", () => {
   const pathInput = createElem("input", { type: "text", value: "/" });
   pathInput.classList.add("path");
 
+  //tooltips
+  const nameTooltip = document.createElement("span")
+  nameTooltip.setAttribute("data-tooltip", "Name to use in the generator, isn't used in the generated file.")
+  nameTooltip.classList.add("in-modal")
+  const nameTooltipIcon = document.createElement("i")
+  nameTooltipIcon.classList.add("far")
+  nameTooltipIcon.classList.add("fa-question-circle")
+
+  const pathTooltip = document.createElement("span")
+  pathTooltip.setAttribute("data-tooltip", "The path to the model. If not entered correctly, you will get an error in-game.")
+  pathTooltip.classList.add("in-modal")
+  const pathTooltipIcon = document.createElement("i")
+  pathTooltipIcon.classList.add("far")
+  pathTooltipIcon.classList.add("fa-question-circle")
+
   //add everything to DOM
+  nameTooltip.appendChild(nameTooltipIcon);
+  pathTooltip.appendChild(pathTooltipIcon);
+
   modalBody.appendChild(nameLabel);
   modalBody.appendChild(nameInput);
+  modalBody.appendChild(nameTooltip)
 
   modalBody.appendChild(pathLabel);
   modalBody.appendChild(pathInput);
+  modalBody.appendChild(pathTooltip)
 
   modelDiv.appendChild(modelTitle);
   modelDiv.appendChild(buttonsDiv);

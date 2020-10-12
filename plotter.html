@@ -5,10 +5,12 @@
     <link href="./css/navbar.css" type="text/css" rel="stylesheet" />
     <link href="./css/plotter.css" type="text/css" rel="stylesheet" />
     <link href="./css/modal.css" type="text/css" rel="stylesheet" />
+    <link href="./css/tooltip.css" type="text/css" rel="stylesheet"/>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"
     ></script>
+    <script src="https://kit.fontawesome.com/6198ce0878.js" crossorigin="anonymous"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js" defer=""></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.2.0/math.min.js"></script>
     <script defer src="./js/plotter.js"></script>
@@ -32,18 +34,22 @@
         <div class="timeMin input">
           <label for="timeMin">Time Min:</label>
           <input type="number" id="timeMin" min="-50" max="50" value="0"/>
+          <span data-tooltip="Point in time where the generation starts."><i class="far fa-question-circle"></i></span>
         </div>
         <div class="timeMax input">
           <label for="timeMax">Time Max:</label>
           <input type="number" id="timeMax" min="-50" max="50" value="20"/>
+          <span data-tooltip="Point in time where the generation ends."><i class="far fa-question-circle"></i></span>
         </div>
         <div class="particles input">
           <label for="particles">Particles:</label>
           <input type="number" id="particles" min="1" max="1000" value="150"/>
+          <span data-tooltip="Amount of particles in the generated shape."><i class="far fa-question-circle"></i></span>
         </div>
         <div class="x input">
           <label for="x">X:</label>
           <input type="text" id="x" />
+          <span data-tooltip="Fill in your formula in the XYZ inputs, or pick a preset below."><i class="far fa-question-circle"></i></span>
         </div>
         <div class="y input">
           <label for="y">Y:</label>

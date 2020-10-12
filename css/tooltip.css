@@ -1,0 +1,38 @@
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  align-self: center;
+  margin-left: 1rem;
+}
+
+[data-tooltip]::after {
+  position: absolute;
+  min-width: 100%;
+  width: max-content;
+  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  content: attr(data-tooltip);
+  background: #202020d0;
+  bottom: 125%;
+  text-align: center;
+  box-sizing: border-box;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, translate 0.2s;
+}
+
+[data-tooltip]:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+[data-tooltip].in-modal {
+  min-width: 1000%;
+  max-width: 1000%;
+}

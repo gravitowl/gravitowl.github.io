@@ -35,7 +35,7 @@
 .modal-body {
   padding: 10px 15px;
   display: grid;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 100px auto 40px;
   grid-row-gap: 1rem;
 }
 

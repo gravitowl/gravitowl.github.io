@@ -5,10 +5,12 @@
     <link href="./css/navbar.css" type="text/css" rel="stylesheet" />
     <link href="./css/sequence.css" type="text/css" rel="stylesheet" />
     <link href="./css/modal.css" type="text/css" rel="stylesheet" />
+    <link href="./css/tooltip.css" type="text/css" rel="stylesheet"/>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"
     ></script>
+    <script src="https://kit.fontawesome.com/6198ce0878.js" crossorigin="anonymous"></script>
     <script defer src="../js/sequence.js"></script>
     <script defer src="../js/modal.js"></script>
 
@@ -35,6 +37,7 @@
         <div class="command input">
           <label for="command">Command:</label>
           <input type="text" id="command" />
+          <span data-tooltip="The command you want to use in the generator."><i class="far fa-question-circle"></i></span>
         </div>
         <div class="repetitions input">
           <label for="repetitions">Repetitions:</label>
@@ -45,6 +48,7 @@
             value="5"
             id="repetitions"
           />
+          <span data-tooltip="The amount of times the command will be repeated, and the variables will be updated."><i class="far fa-question-circle"></i></span>
         </div>
         <div class="buttons">
           <button id="generate">Generate</button>

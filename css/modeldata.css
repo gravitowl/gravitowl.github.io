@@ -37,7 +37,7 @@ body {
 .input {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: 15% 40%;
+  grid-template-columns: 15% 40% 40%;
 }
 
 label {

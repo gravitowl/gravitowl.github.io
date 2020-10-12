@@ -5,10 +5,12 @@
     <link href="./css/navbar.css" type="text/css" rel="stylesheet" />
     <link href="./css/modeldata.css" type="text/css" rel="stylesheet" />
     <link href="./css/modal.css" type="text/css" rel="stylesheet" />
+    <link href="./css/tooltip.css" type="text/css" rel="stylesheet"/>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"
     ></script>
+    <script src="https://kit.fontawesome.com/6198ce0878.js" crossorigin="anonymous"></script>
     <script defer src="../js/modeldata.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gravitowl's Website || Custom Model Data Generator</title>
@@ -1287,6 +1289,7 @@
             </select>
             <input type="text" id="filter" placeholder="Filter" />
           </div>
+          <span data-tooltip="The item that's used as base for your custom model."><i class="far fa-question-circle"></i></span>
         </div>
         <div class="baseValue input">
           <label for="baseValue">Base value:</label>
@@ -1297,7 +1300,7 @@
             value="100000"
             id="baseValue"
           />
-          <span>(6 digits)</span>
+          <span data-tooltip="The first number used for the custom model data file. 6 digit number."><i class="far fa-question-circle"></i></span>
         </div>
         <div class="buttons">
           <button id="generate">Generate</button>
