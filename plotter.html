@@ -150,14 +150,19 @@
             <option value="witch">Witch</option>
             <option value="dragon_breath">Dragon Breath</option>
           </select>
+          <span data-tooltip="The particle used in your shape." class="in-modal"><i class="far fa-question-circle"></i></span>
           <label for="speed">Speed:</label>
           <input type="number" id="speed" min="0.0001" max="100" value="0.001"/>
+          <span data-tooltip="The speed the particles show at." class="in-modal"><i class="far fa-question-circle"></i></span>
           <label for="count">Count:</label>
           <input type="number" id="count" min="1" max="999999999" value="10"/>
+          <span data-tooltip="Amount of particles per command that are shown." class="in-modal"><i class="far fa-question-circle"></i></span>
           <label for="force">Force:</label>
           <input type="checkbox" id="force" checked="true"/>
+          <span data-tooltip="If true, particles are rendered from any distance to the player." class="in-modal"><i class="far fa-question-circle"></i></span>
           <label for="selector">Selector:</label>
           <input type="text" id="selector" value="@a">
+          <span data-tooltip="The entities that can see the particle shape." class="in-modal"><i class="far fa-question-circle"></i></span>
           </label>
         </div>
       </div>

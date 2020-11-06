@@ -21,7 +21,6 @@ renderButton.addEventListener("click", () => {
   const x = xInput.value;
   const y = yInput.value;
   const z = zInput.value;
-  const particleAmount = particlesInput.value;
   const particleType = particleTypeInput.value;
   const selector = selectorInput.value;
   const force = forceInput.checked;
@@ -29,12 +28,11 @@ renderButton.addEventListener("click", () => {
   const speed = particleSpeedInput.value;
   const timeMin = Number(timeMinInput.value);
   const timeMax = Number(timeMaxInput.value);
-  const points = Number(particlesInput.value);
+  const particleAmount = Number(particlesInput.value);
   generateCommands(
     x,
     y,
     z,
-    points,
     timeMin,
     timeMax,
     particleAmount,
@@ -51,7 +49,6 @@ function generateCommands(
   x,
   y,
   z,
-  points,
   timeMin,
   timeMax,
   particleAmount,

@@ -58,6 +58,7 @@ select {
   height: 1.5rem;
   text-align-last: center;
 }
+
 button {
   background: #a4b494;
   border: none;
@@ -67,11 +68,20 @@ button {
   height: 2rem;
   width: 5rem;
   outline: none;
+  margin-right: 1rem;
+}
+
+button.remove {
+  background: #e10000;
 }
 
 button:hover {
   background: #519872;
   cursor: pointer;
+}
+
+button.remove:hover {
+  background: #c70000;
 }
 
 .buttons {

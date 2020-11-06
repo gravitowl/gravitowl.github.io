@@ -72,17 +72,17 @@ button {
   margin-right: 1rem;
 }
 
+button.remove {
+  background: #e10000;
+}
+
 button:hover {
   background: #519872;
   cursor: pointer;
 }
 
-.buttons {
-  display: flex;
-  float: left;
-  align-items: center;
-  width: 100%;
-  margin-top: 2rem;
+button.remove:hover {
+  background: #c70000;
 }
 
 .variable-card {
