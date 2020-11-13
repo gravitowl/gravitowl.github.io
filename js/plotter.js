@@ -238,6 +238,14 @@ presetInput.addEventListener("change", () => {
       zInput.value =
         "(T-1)*((1)/(1+exp(-10000*(T-1)))-((1)/(1+exp(-10000*(T-2)))))+(1)/(1+exp(-10000*(T-2)))-((1)/(1+exp(-10000*(T-3))))+(4-T)*((1)/(1+exp(-10000*(T-3)))-((1)/(1+exp(-10000*(T-4)))))+(1)/(1+exp(-10000*(T-5)))-((1)/(1+exp(-10000*(T-6))))+(1)/(1+exp(-10000*(T-7)))-((1)/(1+exp(-10000*(T-8))))+(T-9)*((1)/(1+exp(-10000*(T-9)))-((1)/(1+exp(-10000*(T-10)))))+(1)/(1+exp(-10000*(T-10)))-((1)/(1+exp(-10000*(T-11))))+(12-T)*((1)/(1+exp(-10000*(T-11)))-((1)/(1+exp(-10000*(T-12)))))";
       break;
+    case "circle":
+      timeMinInput.value = "0";
+      timeMaxInput.value = "20";
+      particlesInput.value = "100";
+      xInput.value = "sin(T)*10"
+      yInput.value = "cos(T)*10"
+      zInput.value = "1";
+      break;
   }
   renderButton.click();
 });

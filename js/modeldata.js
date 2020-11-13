@@ -280,7 +280,6 @@ String.prototype.trim = function () {
 
 baseItemFilter.oninput = () => {
   options = baseItemInput.getElementsByTagName("option");
-  console.log(options[0].value.toLowerCase());
   for (let i = options.length - 1; i >= 0; i--) {
     if (options[i].value.toLowerCase().includes(baseItemFilter.value)) {
       options[i].style.display = "block";
