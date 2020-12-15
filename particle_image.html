@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./css/navbar.css" type="text/css" rel="stylesheet" />
+    <link href="./css/particle_image.css" type="text/css" rel="stylesheet" />
+    <link href="./css/modal.css" type="text/css" rel="stylesheet" />
+    <link href="./css/tooltip.css" type="text/css" rel="stylesheet"/>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"
+    ></script>
+    <script src="https://kit.fontawesome.com/6198ce0878.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.2.0/math.min.js"></script>
+    <script defer src="./js/particle_image.js"></script>
+    <script defer src="./js/modal.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravitowl's Website || Particle to Image</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html"><h2>gravitowl</h2></a>
+      <ul class="links">
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="generators.html">Generators</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="output card">
+        <textarea class="outputArea"></textarea>
+      </div>
+      <div class="form card">
+        <h2>Particle Image Generator</h2>
+        <div class="image input">
+          <label for="image">Upload Image:</label>
+          <div class="imageUpload">
+            <button id="image">Upload</button>
+            <span class="uploadedImage"></span>
+          </div>
+          <span data-tooltip="Upload the image you want to use."><i class="far fa-question-circle"></i></span>
+          <input type="file" id="realImage" accept="image/*">
+        </div>
+        <div class="size input">
+          <label for="size">Particle Size:</label>
+          <input type="number" min="1" max="6" value="4" id="size">
+          <span data-tooltip="The size of the dust particle for your image."><i class="far fa-question-circle"></i></span>
+        </div>
+        <div class="spacing input">
+          <label for="spacing">Spacing:</label>
+          <input type="number" min="0.5" max="4" value="0.5" id="spacing">
+          <span data-tooltip="The space between particles."><i class="far fa-question-circle"></i></span>
+        </div>
+        <div class="direction input">
+          <label for="direction">Direction:</label>
+          <select id="direction">
+            <option value="x">X axis</option>
+            <option value="z">Z axis</option>
+          </select>
+          <span data-tooltip="Generate the image along the Z or X axis."><i class="far fa-question-circle"></i></span>
+        </div>
+        <div class="buttons">
+          <button id="generate">Generate</button>
+          <button id="download">Download</button>
+        </div>
+        <p class="error download">No output to download! (this generator is pretty slow and might take a while!)</p>
+        <p class="error generate">No image to generate!</p>
+        <p class="info">This generator is currently pretty slow so keep that in mind. I suggest 128x128 or smaller images, any bigger and Minecraft can't render all particles at once.</p>
+      </div>
+      <div id="overlay"></div>
+    </div>
+  </body>
+</html>

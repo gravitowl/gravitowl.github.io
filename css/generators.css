@@ -68,6 +68,11 @@ body {
   background-size: cover;
 }
 
+.card-image.particle-image {
+  background: url("../images/generators/particle_image.jpg");
+  background-size: cover;
+}
+
 .card-text {
   grid-area: text;
   margin-top: 1rem;
